@@ -1,0 +1,72 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block title %}
+    <title>{{ _('view note page title') }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block scripts -%}
+    <script type="text/javascript" src="{{ url_for("static", filename="jquery.min.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/aes_ctr.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/buffer.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/scrypt.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/crypto_ctr.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/view_note.js") }}"></script>
+{%- endblock %}
+{% block styles -%}
+    <style>
+        .alert-dismissible {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        #do-not-show-again-tick {
+            background-color: transparent;
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        #pageTitle {
+            margin-top: 20px;
+        {% if is_admin %}
+            color: #d4fd72;
+        {% endif %}
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <h1 id="pageTitle">{{ _('view note heading') }}</h1>
+    <input type="hidden" id="note-id" value="{{ note_id }}">
+    <div id="warning">
+        <div class="card border-danger bg-transparent mb-3" style="margin-top: 25px">
+            <div class="card-body text-danger">
+                <h3 class="card-title">{{ _('view note warning header') }}</h3>
+                <p class="card-text" style="color: rgb(255, 100, 100)">{{ _('view note warning description') }}</p>
+                <button class="btn btn-danger shadow-none" id="sure"
+                        onclick="view_note()">{{ _('view note btn') }}</button>
+            </div>
+        </div>
+    </div>
+    {% if show_descriprion %}
+        <div id="description-banner">
+            <div class="alert alert-dismissible" role="alert">
+                <h5>{{ _('ad banner header') }}</h5>
+                <p>{{ _('ad banner description') }}</p>
+                <a class="alert-link" style="color: #cbcaca"
+                   href="{{ url_for('notes.about_notes') }}">{{ _('ad banner act link') }}</a>
+                <hr>
+                <div class="form-check" style="alignment: right; width: fit-content">
+                    <input class="form-check-input shadow-none" type="checkbox" value="" id="do-not-show-again-tick"
+                           checked>
+                    <label class="form-check-label" for="do-not-show-again-tick">
+                        {{ _('ad banner do not show again') }}
+                    </label>
+                </div>
+                <button type="button" class="btn-close btn-close-white shadow-none" onclick="hide_description()"
+                        aria-label="Close"></button>
+            </div>
+        </div>
+    {% endif %}
+{%- endblock %}

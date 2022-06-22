@@ -1,0 +1,13 @@
+import sqlalchemy
+
+from .db_session import SqlAlchemyBase
+
+
+class Note(SqlAlchemyBase):
+    __tablename__ = 'notes'
+
+    id = sqlalchemy.Column(sqlalchemy.String,
+                           primary_key=True, index=True, unique=True)
+    counter = sqlalchemy.Column(sqlalchemy.Integer)
+    content = sqlalchemy.Column(sqlalchemy.String)
+    delete_date = sqlalchemy.Column(sqlalchemy.DateTime)

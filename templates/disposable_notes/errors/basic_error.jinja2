@@ -1,0 +1,70 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block title %}
+    <title>{{ title }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block styles -%}
+    <link href="{{ url_for("static", filename="bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", filename="cover.css") }}" rel="stylesheet">
+    <style>
+        main p {
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: max-content;
+        }
+
+        td {
+            width: 50%;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .contact {
+            padding-left: 10px;
+        }
+
+        .contact a {
+            color: #bbbbbb;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <div style="height: 100%;margin-top: 20%;">
+        <h1><span style="color: #fd3939"> {{ _('Ошибка') }} {{ code }}.</span> {{ title }}</h1>
+        <p>{{ message }}</p>
+        <h5>{{ _('Контакты администратора') }}</h5>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td class="contact">
+                    <a href="mailto:{{ config['ERROR_EMAIL'] }}?subject={{ code }}. {{ title }}">
+                        {{ config['ERROR_EMAIL'] }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+{%- endblock %}

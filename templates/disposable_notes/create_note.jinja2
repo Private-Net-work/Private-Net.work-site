@@ -1,0 +1,226 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block description -%}
+    <meta name="description" content="{{ _('site description') }}">
+{%- endblock %}
+{% block title %}
+    <title>{{ _('%(sitename)s', sitename=config["SITENAME"]) }}</title>
+{% endblock %}
+{% block styles -%}
+    <style>
+        .alert {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        #do-not-show-again-tick {
+            background-color: transparent;
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        #pageTitle {
+            margin-top: 20px;
+        {% if is_admin %}
+            color: #d4fd72;
+        {% endif %}
+        }
+
+        #note-content, #submit-btn {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        #note-content::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 20px;
+        }
+
+        #file {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #submit-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        #submit-btn:hover {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        #tocopy {
+            text-align: center;
+        }
+
+        #the-count {
+            float: right;
+            padding: 0.2rem 5px 0 0;
+            font-size: 0.875rem;
+        }
+
+        #the-count, #maximum {
+            color: #b8b8b8;
+        }
+
+        #advanced {
+            margin-top: 25px;
+        }
+
+        #advanced a {
+            text-decoration: none;
+            text-align: center;
+            color: #7f7f7f;
+            display: inline;
+            font-size: 14px;
+        }
+
+        #deleteIn {
+            background-image: url("{{ url_for('static', filename='svg/down.svg') }}");
+            color: white;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        #deleteIn option {
+            color: black;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link active" aria-current="page" href="{{ url_for("notes.create_note") }}">
+        {{ _('nav create note') }}
+    </a>
+    <a class="nav-link" href="{{ url_for("notes.about_notes") }}">
+        {{ _('nav about') }}
+    </a>
+{%- endblock %}
+{% block content -%}
+    <h1 id="pageTitle">{{ _('create note h1 header') }}</h1>
+    {% if show_descriprion %}
+        <div id="description-banner">
+            <div class="alert alert-dismissible" role="alert">
+                <h5>{{ _('ad banner header') }}</h5>
+                <p>{{ _('ad banner description') }}</p>
+                <a class="alert-link" style="color: #cbcaca"
+                   href="{{ url_for('notes.about_notes') }}">{{ _('ad banner act link') }}</a>
+                <hr>
+                <div class="form-check" style="alignment: right; width: fit-content">
+                    <input class="form-check-input shadow-none" type="checkbox" value="" id="do-not-show-again-tick"
+                           checked>
+                    <label class="form-check-label" for="do-not-show-again-tick">
+                        {{ _('ad banner do not show again') }}
+                    </label>
+                </div>
+                <button type="button" class="btn-close btn-close-white shadow-none" onclick="hide_description()"
+                        aria-label="Close"></button>
+            </div>
+        </div>
+    {% endif %}
+    <div id="form">
+        <form name="new-note" novalidate>
+            <div class="mb-3">
+                <label for="note-content" class="form-label"></label>
+                <textarea class="form-control shadow-none" id="note-content" name="content" rows="8"
+                          maxlength="5000" placeholder="{{ _('note content placeholder') }}"
+                          required autofocus></textarea>
+                <div id="the-count">
+                    <span id="current">0</span>
+                    <span id="maximum">/ 5000</span>
+                </div>
+            </div>
+            <p id="advanced">
+                <a href="#collapse" onclick="advancedMenu()">
+                    <img alt="advanced" id="advancedIcon1"
+                         src="{{ url_for('static', filename='svg/angle-double-down.svg') }}"/>
+                    <span style="margin-left: 2px; margin-right: 2px;">
+                        <b>{{ _('advanced options') }}</b>
+                    </span>
+                    <img alt="advanced" id="advancedIcon2"
+                         src="{{ url_for('static', filename='svg/angle-double-down.svg') }}"/>
+                </a>
+            </p>
+            <div id="collapse" style="display: none">
+                <div style="text-align: left">
+                    <input type="hidden" id="hex" value="empty">
+                    <input type="hidden" id="ext">
+                    <label for="deleteIn" class="form-label">{{ _('also delete in') }}</label>
+                    <select id="deleteIn" class="form-select shadow-none">
+                        <option selected value="10080">{{ _('7 days') }}</option>
+                        <option value="2880">{{ _('2 days') }}</option>
+                        <option value="1440">{{ _('1 day') }}</option>
+                        <option value="720">{{ _('12 hours') }}</option>
+                        <option value="120">{{ _('2 hours') }}</option>
+                        <option value="60">{{ _('1 hour') }}</option>
+                        <option value="30">{{ _('30 minutes') }}</option>
+                        <option value="15">{{ _('15 minutes') }}</option>
+                        <option value="5">{{ _('5 minutes') }}</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">{{ _('file input label') }}</label>
+                        <input class="form-control shadow-none" type="file" id="file">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <a class="form-control shadow-none"
+                   id="submit-btn" style="text-decoration: none; cursor: pointer"
+                   onclick="create_note(); return false;">{{ _('create note btn') }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block endscripts -%}
+    <script type="text/javascript" src="{{ url_for("static", filename="jquery.min.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/aes_ctr.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/buffer.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/scrypt.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/crypto_ctr.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for("static", filename="notes/create_note.js") }}"></script>
+    <script type="text/javascript">
+        $('textarea').keyup(function () {
+            let color;
+            const characterCount = $(this).val().length,
+                current = $('#current'),
+                maximum = $('#maximum'),
+                theCount = $('#the-count');
+
+            current.text(characterCount);
+
+            if (characterCount < 1) {
+                color = '#b8b8b8';
+            }
+            if (characterCount > 0 && characterCount < 2000) {
+                color = '#20db1a';
+            }
+            if (characterCount > 1999 && characterCount < 4000) {
+                color = '#e8ff00';
+            }
+            if (characterCount > 3999 && characterCount < 5000) {
+                color = '#e57017';
+            }
+            if (characterCount > 4999) {
+                color = '#d52929';
+                theCount.css('font-weight', 'bold');
+                maximum.css('font-weight', 'bold');
+            } else {
+                theCount.css('font-weight', 'normal');
+                maximum.css('font-weight', 'normal');
+            }
+            theCount.css('color', color);
+            maximum.css('color', color);
+        });
+    </script>
+{%- endblock %}

@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /about
+Allow: /favicon.ico
+Allow: /static/favicon/apple-touch-icon.png
+Allow: /static/favicon/favicon-32x32.png
+Allow: /static/favicon/favicon-16x16.png
+Allow: /static/favicon/manifest.json
+
+User-agent: Yandex
+Disallow: /
+Allow: /$
+Allow: /about
+Allow: /favicon.ico
+Allow: /static/favicon/apple-touch-icon.png
+Allow: /static/favicon/favicon-32x32.png
+Allow: /static/favicon/favicon-16x16.png
+Allow: /static/favicon/manifest.json
+
+User-agent: Googlebot
+Disallow: /
+Allow: /$
+Allow: /about
+Allow: /favicon.ico
+Allow: /static/favicon/apple-touch-icon.png
+Allow: /static/favicon/favicon-32x32.png
+Allow: /static/favicon/favicon-16x16.png
+Allow: /static/favicon/manifest.json

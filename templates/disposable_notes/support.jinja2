@@ -1,0 +1,92 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block title %}
+    <title>{{ _('support page title') }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block styles -%}
+    <style>
+        main p {
+            text-align: left;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        table {
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        td {
+            width: 50%;
+            text-align: left;
+        }
+
+        .contact {
+            padding-left: 10px;
+        }
+
+        .contact a {
+            color: #bbbbbb;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <h1>{{ _('support heading') }}</h1>
+    <div class="container px-7" style="margin-top: 30px">
+        <div class="row gx-7">
+            <div class="col">
+                <div class="">
+                    <p style="font-size: 25px; text-align: center; vertical-align: center">
+                        {{ _('support in') }}
+                        <span class="badge" style="color: white; background-color: #0088cc">Telegram</span>
+                    </p>
+                    <p style="font-size: 25px; text-align: center; vertical-align: center" class="contact">
+                        <a href="https://t.me/PN_site">@PN_site</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="">
+                    <a href="https://t.me/PN_site">
+                        <img class="col-md-6 float-md-start mb-3 ms-md-3" alt="Telegram"
+                             src="{{ url_for('static', filename='svg/telegram-qr.svg') }}" style="width: 140px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>{{ _('mail addresses') }}</h3>
+    <table>
+        <tr>
+            <td>{{ _('support email label') }}</td>
+            <td class="contact">
+                <a href="mailto:{{ config["SUPPORT_EMAIL"] }}">
+                    {{ config["SUPPORT_EMAIL"] }}
+                </a>
+            </td>
+        </tr>
+        <tr style="height: 10px"></tr>
+        <tr>
+            <td>{{ _('support error email label') }}</td>
+            <td class="contact">
+                <a href="mailto:{{ config["ERROR_EMAIL"] }}">
+                    {{ config["ERROR_EMAIL"] }}
+                </a>
+            </td>
+        </tr>
+    </table>
+{%- endblock %}

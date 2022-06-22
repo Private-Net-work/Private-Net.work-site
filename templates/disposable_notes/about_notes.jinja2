@@ -1,0 +1,230 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block description %}
+    <meta name="description" content="{{ _('about description') }}">
+{% endblock %}
+{% block title %}
+    <title>{{ _('about title') }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block styles -%}
+    <style>
+        main p {
+            text-align: start;
+            color: #c7c7c7;
+        }
+
+        .white p {
+            color: white;
+        }
+
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 35px;
+        }
+
+        h5, h3 {
+            text-align: left;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        h5 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #36bfff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #36bfff;
+        }
+
+        li {
+            text-align: left;
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        .display-1 {
+            font-size: 50px;
+        }
+
+        .display-2 {
+            font-size: 45px;
+        }
+
+        .display-3 {
+            font-size: 40px;
+        }
+
+        .display-4 {
+            font-size: 35px;
+        }
+
+        .display-5 {
+            font-size: 30px;
+        }
+
+        .display-6 {
+            font-size: 25px;
+        }
+
+        .lead {
+            font-size: 17px;
+        }
+
+        #articles-list {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .anchor {
+            opacity: 0.15;
+            padding-bottom: 3px;
+        }
+
+        .anchor:hover {
+            opacity: 0.3;
+        }
+
+        .anchor:active {
+            opacity: 1;
+        }
+
+        .anchor img {
+            position: absolute;
+            padding-left: 5px;
+            padding-top: 6px
+        }
+
+        .nav-link:hover {
+            text-decoration: none;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link active" aria-current="page" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <h1>{{ _('about main heading') }}</h1>
+    <div class="white lead">{{ _('about service description') }}</div>
+    <h3 class="display-3" id="articles">{{ _('articles heading') }}</h3>
+    <ul id="articles-list">
+        <li style="text-align: left; color: white">
+            <a href="{{ url_for('notes.formatting') }}" class="lead">
+                {{ _('article formatting link') }}
+            </a>
+        </li>
+    </ul>
+    <h3 class="display-3" id="faq">{{ _('faq heading') }}</h3>
+    <ul style="margin-top: 15px;">
+        <li>
+            <a href="#can-admins-see-note-content">
+                {{ _('faq can-admins-see-note-content heading ') }}
+            </a>
+        </li>
+        <li>
+            <a href="#sharing-decrypted-note-content">
+                {{ _('faq sharing-decrypted-note-content heading') }}v
+            </a>
+        </li>
+        <li>
+            <a href="#note-data">
+                {{ _('faq note-data heading') }}
+            </a>
+        </li>
+        <li>
+            <a href="#storing-ip">
+                {{ _('faq storing-ip heading') }}
+            </a>
+        </li>
+        <li>
+            <a href="#stats">
+                {{ _('faq stats heading') }}
+            </a>
+        </li>
+        <li>
+            <a href="#ads">
+                {{ _('faq ads heading') }}
+            </a>
+        </li>
+    </ul>
+    <h5 id="can-admins-see-note-content" class="position-relative">{{ _('faq can-admins-see-note-content heading ') }}
+        <a href="#can-admins-see-note-content" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}Скопировать ссылку"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq can-admins-see-note-content 1') }}
+    <img src="{{ url_for('static', filename='img/url_parts.png') }}" alt="URL parts"
+         style="width: 100%; margin-bottom: 10px;"/>
+    {{ _('faq can-admins-see-note-content 2') }}
+    <h5 id="sharing-decrypted-note-content"
+        class="position-relative">{{ _('faq sharing-decrypted-note-content heading') }}
+        <a href="#sharing-decrypted-note-content" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq sharing-decrypted-note-content') }}
+    <h5 id="note-data" class="position-relative">{{ _('faq note-data heading') }}
+        <a href="#note-data" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq note-data') }}
+    <table class="table table-dark table-bordered border-light" style="word-break: break-word;">
+        <thead>
+        <tr>
+            <td><b>id</b></td>
+            <td><b>content</b></td>
+            <td><b>delete_date</b></td>
+            <td><b>counter</b></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Me3Q5nxebo</td>
+            <td>Îçõ3jsºù-Úkmàû0Þò^</td>
+            <td>2022-02-24 20:46:50.355676</td>
+            <td>5941129521571234</td>
+        </tr>
+        </tbody>
+    </table>
+    <h5 id="storing-ip" class="position-relative">{{ _('faq storing-ip heading') }}
+        <a href="#storing-ip" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq storing-ip') }}
+    <h5 id="stats" class="position-relative">{{ _('faq stats heading') }}
+        <a href="#stats" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq stats') }}
+    <h5 id="ads" class="position-relative">{{ _('faq ads heading') }}
+        <a href="#ads" class="stretched-link anchor">
+            <img alt="{{ _('copy link') }}"
+                 src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
+        </a>
+    </h5>
+    {{ _('faq ads') }}
+    <div class="alert" role="alert" style="background-color: rgba(255, 255, 255, 0.08)">
+        <h4>
+            {{ _('did not get answer') }}
+            <a href="{{ url_for('notes.support') }}">{{ _('write us link') }}</a>
+        </h4>
+    </div>
+
+{%- endblock %}

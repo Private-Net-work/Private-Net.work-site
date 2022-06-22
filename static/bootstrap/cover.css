@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(37, 37, 40);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    appearance: none;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333333;
+    text-shadow: none;
+}
+
+.cover-container {
+    max-width: 42em;
+}
+
+.nav-masthead .nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+}

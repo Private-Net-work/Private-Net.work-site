@@ -1,0 +1,349 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block description -%}
+    <meta name="description" content="{{ _('formatting description') }}">
+{%- endblock %}
+{% block title %}
+    <title>{{ _('formatting title') }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block styles -%}
+    <style>
+        main p {
+            text-align: left;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #36bfff;
+        }
+
+        td {
+            height: 100%;
+            vertical-align: middle;
+
+        }
+
+        td p {
+            text-align: center;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #36bfff;
+        }
+
+        .alert p {
+            color: #636464;
+        }
+
+        .nav-link:hover {
+            text-decoration: none;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link active" aria-current="page" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <nav aria-label="breadcrumb" style="margin-top: 40px">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('notes.about_notes') }}">
+                    {{ _('formatting bc about') }}
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('notes.about_notes') }}#articles">
+                    {{ _('formatting bc articles') }}
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ _('formatting heading') }}
+            </li>
+        </ol>
+    </nav>
+    <h1>{{ _('formatting heading') }}</h1>
+    <p>
+        {{ _('formatting text') }}
+    </p>
+    <table class="table table-dark table-borderless" style="word-break: break-word;">
+        <tbody>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<a href="') }}<span
+                        style="color: rgba(255, 255, 255, 0.6)">https://private-net.work</span>{{ escape('">') }}
+                    <br><span style="color: rgba(255, 255, 255, 0.6)">{{ _('link') }}</span><br>
+                    {{ escape('</a>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <a href="https://private-net.work"
+                       style="color: #0d6efd; text-decoration: underline">{{ _('link') }}</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h1>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h1>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h1 style="margin-top: 0">{{ _('text') }}</h1>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h2>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h2>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h2>{{ _('text') }}</h2>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h3>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h3>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h3>{{ _('text') }}</h3>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h4>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h4>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h4>{{ _('text') }}</h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h5>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h5>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h5>{{ _('text') }}</h5>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<h6>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</h6>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <h6>{{ _('text') }}</h6>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<lp>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</p>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <p style='text-align: left'>{{ _('text') }}</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<rp>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</p>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <p style='text-align: right'>{{ _('text') }}</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<b>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('<b>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <b>{{ _('text') }}</b>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<u>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</u>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <u>{{ _('text') }}</u>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<i>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</i>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <i>{{ _('text') }}</i>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<rspan>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</span>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <span style='color: red'>{{ _('text') }}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<gspan>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</span>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <span style='color: #09b809'>{{ _('text') }}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<bspan>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</span>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <span style='color: blue'>{{ _('text') }}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<ms>') }}
+                    <span style="color: rgba(255, 255, 255, 0.6)">{{ _('text') }}</span>
+                    {{ escape('</ms>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <span class="user-select-all font-monospace">{{ _('formatting monospace') }}</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<hr>') }}
+                </p>
+            </td>
+            <td>
+                <div class="alert alert-light" role="alert" style="word-wrap: break-word; margin: 0">
+                    <hr style="height: 2px; color: black">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="font-monospace">
+                    {{ escape('<br>') }}
+                </p>
+            </td>
+            <td>
+                <p class="font-monospace">
+                    {{ _('formatting new line') }}
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h4>{{ _('formatting example heading') }}</h4>
+    <h5 style="margin-bottom: 15px; margin-top: 15px; text-align: left">{{ _('formatting text heading') }}</h5>
+    <div class="alert alert-light" role="alert" style="background-color: rgba(255, 255, 255, 0.08); border: none;">
+        <p class="font-monospace"
+           style="text-align: left; color: white">
+            {{ escape(_('formatting text 1')) }}<br>
+            {{ escape(_('formatting text 2')) }}<br>
+            {{ escape(_('formatting text 3')) }}<br>
+            {{ escape(_('formatting text 4')) }}<br>
+            {{ escape(_('formatting text 5')) }}<br>
+            {{ escape(_('formatting text 6')) }}<br>
+            {{ escape(_('formatting text 7')) }}
+        </p>
+    </div>
+    <h5 style="margin-bottom: 20px; text-align: left">{{ _('formatting example content heading') }}</h5>
+    <div class="alert alert-light" role="alert" style="word-wrap: break-word">
+        {{ _('formatting example content') }}
+    </div>
+    <div class="alert" role="alert" style="background-color: rgba(255, 255, 255, 0.08)">
+        <h4>
+            {{ _('did not get answer') }}
+            <a href="{{ url_for('notes.support') }}">{{ _('write us link') }}</a>
+        </h4>
+    </div>
+
+{%- endblock %}

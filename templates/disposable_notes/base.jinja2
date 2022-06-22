@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="{{ _('lang code') }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block description -%}{%- endblock %}
+    <meta name="keywords" content="{{ _('site keywords') }}">
+    <meta name="og:image" content="{{ url_for('static', filename='img/thumb.jpeg') }}">
+    <meta name='theme-color' content='#212529'>
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/manifest.json') }}">
+    {% block title -%}{%- endblock %}
+    {% block scripts -%}{%- endblock %}
+    <link href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap/cover.css') }}" rel="stylesheet">
+    <style>
+        #logo {
+            margin-bottom: 10px
+        }
+
+        #logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #logo a h3 {
+            font-size: 25px;
+        }
+
+        #logo a h3 span {
+            position: absolute;
+            margin-right: 5px;
+            margin-left: -50px;
+            margin-top: -4px;
+            padding: 2px 10px 2px 3px;
+            width: 30px;
+            color: black;
+            font-size: 9px;
+        }
+
+        noscript div {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        noscript div div {
+            background-color: white;
+            padding: 50px 50px 50px 50px;
+            color: black
+        }
+
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            position: relative;
+        }
+
+        .content {
+            padding-bottom: 90px;
+        }
+
+        main {
+            position: relative;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            height: 90px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer div p a {
+            text-decoration: none;
+            color: #929292;
+        }
+
+        footer div p a:hover {
+            color: #c6c6c6;
+            text-decoration: underline;
+        }
+
+        #info-banner {
+            padding-top: 7px;
+            padding-bottom: 1px;
+            background-color: #ce0000;
+            width: 100%;
+        }
+
+        #info-banner p {
+            text-align: center;
+        }
+    </style>
+    {% block styles -%}{%- endblock %}
+</head>
+<body class="h-100 text-center text-white">
+<noscript>
+    <div>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <h1>{{ _('enable js heading') }}</h1>
+            <p>{{ _('enable js description') }}</p>
+        </div>
+    </div>
+</noscript>
+<div class="wrapper">
+    <div class="content">
+        <div class="cover-container flex-column mx-auto w-100 p-3 d-flex">
+            <header class="mb-auto">
+                <div class="float-md-start mb-0" id="logo">
+                    <a href="{{ url_for('notes.create_note') }}">
+                        <h3>
+                            {{ config["SITENAME"] }}
+                            <span class="badge bg-light">
+                        {{ config["SERVICE_NAME"] }}
+                    </span>
+                        </h3>
+                    </a>
+                </div>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    {% block navlinks -%}{%- endblock %}
+                </nav>
+            </header>
+            <main class="px-3">
+                {% block content -%}{%- endblock %}
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div class="mt-auto text-white-50">
+            <p style="padding-top: 10px;">
+                <a href="{{ url_for('notes.support') }}">{{ _('contacts') }}</a> &middot;
+                <a href="{{ url_for('notes.about_notes') }}#articles">{{ _('articles') }}</a> &middot;
+                <a href="{{ url_for('notes.about_notes') }}#faq">{{ _('FAQ') }}</a> &middot;
+                {{ _('lang alt') }}
+            </p>
+            <p style="text-align: right; margin-right: 10px">&copy;
+                <a href="{{ url_for('notes.create_note') }}">{{ config["SITENAME"] }}</a>,
+                2021 – {{ year }} </p>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="{{ url_for("static", filename="notes/notes.js") }}"></script>
+{% block endscripts -%}{%- endblock %}
+</body>
+</html>

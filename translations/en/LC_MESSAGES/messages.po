@@ -1,0 +1,695 @@
+# English translations for Private-Net.work site.
+# Copyright (C) 2022 Private-Net.work
+# This file is distributed under the same license as the Private-Net.work
+# site project.
+# Private-Net.work <support@private-net.work>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  2.0\n"
+"Report-Msgid-Bugs-To: errors@private-net.work\n"
+"POT-Creation-Date: 2022-03-02 21:37+0300\n"
+"PO-Revision-Date: 2022-01-13 19:27+0300\n"
+"Last-Translator: Private-Net.work <support@private-net.work>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: blueprints/errorhandling.py:18
+msgid "Bad request"
+msgstr "Bad request"
+
+#: blueprints/errorhandling.py:19
+msgid "400 description"
+msgstr ""
+"You tried to request wrong data from the server, so it couldn't process "
+"your request. <br>If you think, that this happened because of our fault, "
+"contact site administrator. "
+
+#: blueprints/errorhandling.py:24
+msgid "Forbidden"
+msgstr "Forbidden"
+
+#: blueprints/errorhandling.py:25
+msgid "403 description"
+msgstr ""
+"You don't have enough rights to view this page. <br>If you think, that "
+"this happened because of our fault, contact site administrator."
+
+#: blueprints/errorhandling.py:30
+msgid "Not found"
+msgstr "Not found"
+
+#: blueprints/errorhandling.py:31
+msgid "404 description"
+msgstr ""
+"We can't find the page you are looking for. Perhaps, it was "
+"removed.<br>If you think, that this happened because of our fault, "
+"contact site administrator."
+
+#: blueprints/errorhandling.py:36
+msgid "Unallowed method"
+msgstr "Method Not Allowed"
+
+#: blueprints/errorhandling.py:37
+msgid "405 description"
+msgstr "Method %(method)s, that you are using, can't be used to open this page."
+
+#: blueprints/errorhandling.py:42
+msgid "Internal Server Error"
+msgstr "Internal Server Error"
+
+#: blueprints/errorhandling.py:43 modules/logger.py:96
+msgid "500 description"
+msgstr ""
+"Congratulations! You've broken our site :) <br>Well, we had an unexpected"
+" error. <br>Please, contact site administrator."
+
+#: blueprints/pseudo_static.py:17
+msgid "Некорректная длина записки!"
+msgstr "Invalid note content length!"
+
+#: blueprints/pseudo_static.py:18
+msgid "link info"
+msgstr "Copy note link below and send it to your interlocutor"
+
+#: blueprints/pseudo_static.py:19
+msgid "Скопировать"
+msgstr "Copy"
+
+#: blueprints/pseudo_static.py:20
+msgid "Скопировано"
+msgstr "Copied"
+
+#: blueprints/pseudo_static.py:21
+msgid "js 400 error"
+msgstr ""
+"An unknown error occurred (400). Please, contact site administrator by "
+"email errors@private-net.work and report this problem. Sorry for the "
+"inconvenience."
+
+#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+msgid "js 500 error"
+msgstr ""
+"Internal server error (500). Please, contact site administrator by email "
+"errors@private-net.work and report this problem. Sorry for the "
+"inconvenience."
+
+#: blueprints/pseudo_static.py:23 blueprints/pseudo_static.py:37
+msgid "js unknown error"
+msgstr ""
+"An unknown error occurred. Please, contact site administrator by email "
+"errors@private-net.work and report this problem. Sorry for the "
+"inconvenience."
+
+#: blueprints/pseudo_static.py:24
+msgid "heavy doc"
+msgstr "Your document size is too much (Allowed up to 2 MB)"
+
+#: blueprints/pseudo_static.py:25
+msgid "heavy content"
+msgstr "Note content is too much."
+
+#: blueprints/pseudo_static.py:33
+msgid "js save data"
+msgstr "Save all important data. You won't be able to open it here again."
+
+#: blueprints/pseudo_static.py:34
+msgid "Выйти"
+msgstr "Exit"
+
+#: blueprints/pseudo_static.py:35
+msgid "js already read"
+msgstr ""
+"This note has been already read. Obviously, it happened while you didn't "
+"confirm note reading. Error code: 404."
+
+#: blueprints/pseudo_static.py:38
+msgid "download file"
+msgstr "Download file"
+
+#: modules/logger.py:54
+msgid "Проводятся технические работы"
+msgstr "Site under construction"
+
+#: modules/logger.py:55
+msgid "construction description"
+msgstr ""
+"We are updating our site to make it a bit better. Please, visit us later."
+" Sorry for the inconvenience."
+
+#: modules/logger.py:95
+#, fuzzy
+msgid "Internal server error"
+msgstr "Internal Server Error"
+
+#: templates/disposable_notes/about_notes.jinja2:3
+msgid "about description"
+msgstr ""
+"Learn, how the one-time notes site works to hide your private data from "
+"third parties while sharing it in messengers"
+
+#: templates/disposable_notes/about_notes.jinja2:6
+msgid "about title"
+msgstr "How it works"
+
+#: templates/disposable_notes/about_notes.jinja2:112
+#: templates/disposable_notes/create_note.jinja2:103
+#: templates/disposable_notes/errors/basic_error.jinja2:51
+#: templates/disposable_notes/formatting.jinja2:45
+#: templates/disposable_notes/support.jinja2:44
+#: templates/disposable_notes/view_note.jinja2:36
+msgid "nav create note"
+msgstr "Create note"
+
+#: templates/disposable_notes/about_notes.jinja2:113
+#: templates/disposable_notes/create_note.jinja2:106
+#: templates/disposable_notes/errors/basic_error.jinja2:52
+#: templates/disposable_notes/formatting.jinja2:46
+#: templates/disposable_notes/support.jinja2:45
+#: templates/disposable_notes/view_note.jinja2:37
+msgid "nav about"
+msgstr "How it works"
+
+#: templates/disposable_notes/about_notes.jinja2:116
+msgid "about main heading"
+msgstr "How it works"
+
+#: templates/disposable_notes/about_notes.jinja2:117
+msgid "about service description"
+msgstr ""
+"<p>        We are a service, that will help you hide the most private "
+"data from being read by third parties        when sharing it with one "
+"interlocutor. Instead of sharing your passwords, payment details, "
+"addresses and        other confidential data in the clear in messengers, "
+"send your partner a link to the one-time note        generated by this "
+"website.    </p>    <p>        After being first read, the note removes "
+"from our server and can't be recovered.        So if your interlocutor is"
+" the first to view the note,        nobody will be able to find out the "
+"note's content afterwards.        Even if anybody reads a note before "
+"him, at least, it will be realized,        when he won't be able to open "
+"the note.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:118
+msgid "articles heading"
+msgstr "Articles"
+
+#: templates/disposable_notes/about_notes.jinja2:122
+msgid "article formatting link"
+msgstr "How to format a note"
+
+#: templates/disposable_notes/about_notes.jinja2:126
+msgid "faq heading"
+msgstr "Frequently asked questions"
+
+#: templates/disposable_notes/about_notes.jinja2:130
+#: templates/disposable_notes/about_notes.jinja2:159
+msgid "faq can-admins-see-note-content heading "
+msgstr "Can website admins or hosting-providers view the notes content?"
+
+#: templates/disposable_notes/about_notes.jinja2:135
+#: templates/disposable_notes/about_notes.jinja2:170
+msgid "faq sharing-decrypted-note-content heading"
+msgstr "Can any site scripts intercept the note's content when it is decrypted?"
+
+#: templates/disposable_notes/about_notes.jinja2:140
+#: templates/disposable_notes/about_notes.jinja2:177
+msgid "faq note-data heading"
+msgstr "What do you know about note, except for its content?"
+
+#: templates/disposable_notes/about_notes.jinja2:145
+#: templates/disposable_notes/about_notes.jinja2:202
+msgid "faq storing-ip heading"
+msgstr "Do you store ip-addresses of your visitors?"
+
+#: templates/disposable_notes/about_notes.jinja2:150
+#: templates/disposable_notes/about_notes.jinja2:209
+msgid "faq stats heading"
+msgstr "What stats do you collect?"
+
+#: templates/disposable_notes/about_notes.jinja2:155
+#: templates/disposable_notes/about_notes.jinja2:216
+msgid "faq ads heading"
+msgstr "How do you monetize this website? Will there be any ads?"
+
+#: templates/disposable_notes/about_notes.jinja2:161
+#: templates/disposable_notes/about_notes.jinja2:172
+#: templates/disposable_notes/about_notes.jinja2:179
+#: templates/disposable_notes/about_notes.jinja2:204
+#: templates/disposable_notes/about_notes.jinja2:211
+#: templates/disposable_notes/about_notes.jinja2:218
+msgid "copy link"
+msgstr "Copy link"
+
+#: templates/disposable_notes/about_notes.jinja2:165
+msgid "faq can-admins-see-note-content 1"
+msgstr ""
+"<p>        No, all notes are been encrypted by client's browser before "
+"sending to our server.        A random secret key is used to encrypt a "
+"note, which is also generated by the browser.        This key is given to"
+" the reader in the link itself after the \"#\" symbol.        It is used "
+"by his browser to encrypt the note's content received from our server."
+"    </p>    <p>        No link symbols after \"#\" (and the key) are "
+"passed to the server.        This link part is called an anchor and it is"
+" usually used by browser to navigate through        the page.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:168
+msgid "faq can-admins-see-note-content 2"
+msgstr ""
+"<p>        Thereby, we don't process any data from the note, except for "
+"it's encrypted content,        that can't be encrypted, as we don't know "
+"neither link nor secret key.    </p>    <p>        By the way, if you "
+"know how to see the browser's requests in the developer tools,        you"
+" can go and see how the notes are encrypted, and what is sent to our "
+"server.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:176
+msgid "faq sharing-decrypted-note-content"
+msgstr ""
+"<p>        No, our site doesn't share decrypted note's content. All "
+"requests, that are made        from the browser can be viewed in the "
+"developer tools. All necessary libraries and        javascript-code is "
+"served directly from our server. We intentionally don't use anything"
+"        that is stored on other sites and CDN, to be confident, that all "
+"code used        don't collect data from our visitors' browsers.        "
+"This is our positive feature from competitive services.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:183
+msgid "faq note-data"
+msgstr ""
+"<p>        We don't associate neither note creater, nor its reader with "
+"the note itself.        We believe, that our goal is to store as few of "
+"your data as possible.    </p>    <p>        There have been always lots "
+"of notes, which have never been read.        Taking this into account, we"
+" decided to set the maximum storage period of every note.        When "
+"this period expires, the note deletes, even if it wasn't read yet. To "
+"prevent        fingerprinting we decided not to store the note's creation"
+" date. We store the expiration date        and time instead, allowing our"
+" users to choose the expiration period        (it can be foond in "
+"advanced options, when creating the note). By default, our notes are"
+"        deleted 7 days after creation. Please note, that it's also the "
+"maximum time they can be stored.    </p>    <p>        Now every note has"
+" 4 fields in our database:        <i>its id, encrypted content, expiry "
+"date and a counter (also needed for decryption)       </i>. Here is the "
+"example note data from the database:    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:208
+msgid "faq storing-ip"
+msgstr ""
+"<p>        As we mentioned before, we try not to collect visitors' data. "
+"Ip-addresses are not the exception.        So in our logs we record only "
+"ip-addresses        <abbr title=\"Hash — function, that 'encrypts' a "
+"string without possible decryption. Equal strings have equal hashes. "
+"That's why using ip hashes we can distinguish different visitors, but "
+"can't get their IPs.\">hashes</abbr>        to distinguish different site"
+" visitors, which can be helpful, while we debug. These hashes are also"
+"        used in our antispam systems.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:215
+msgid "faq stats"
+msgstr ""
+"<p>        We have only 2 counters: the amount of created notes and the "
+"amount of read ones.        These counters help us to analyze, how active"
+" is our site used and sometimes even prevent the bot attack!        We "
+"don't use any external analytics services, such as Google Analytics."
+"        The reason is revealed <a href=\"#sharing-decrypted-note-"
+"content\">here</a>.    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:222
+msgid "faq ads"
+msgstr ""
+"<p>        At first, this site was created for private use. We        "
+"made it not to earn money. We made it to protect our privacy. Of course,"
+"        if our audience will be large enough, we will think of earning "
+"money. But we'll never use        ads engines like Google, as it requires"
+" using their scripts on our site. As we        <a href=\"#sharing-"
+"decrypted-note-content\">are against using external code</a>, the only"
+"        way of showing ads on our site will be searching for advertisers "
+"by ourselves.        <i>But the best method of earning money, as we see "
+"it, is creating a donation system.</i>    </p>"
+
+#: templates/disposable_notes/about_notes.jinja2:225
+#: templates/disposable_notes/formatting.jinja2:329
+msgid "did not get answer"
+msgstr "Haven't found the answer?"
+
+#: templates/disposable_notes/about_notes.jinja2:226
+#: templates/disposable_notes/formatting.jinja2:330
+msgid "write us link"
+msgstr "Write us!"
+
+#: templates/disposable_notes/base.jinja2:2
+msgid "lang code"
+msgstr "en"
+
+#: templates/disposable_notes/base.jinja2:7
+msgid "site keywords"
+msgstr ""
+"private network, private net, private network notes, one-time notes, "
+"privacy, self-destructed notes, private messaging, безопасная передача "
+"данных, защита данных от третьих лиц, одноразовые записки, security, "
+"disposable notes"
+
+#: templates/disposable_notes/base.jinja2:109
+msgid "enable js heading"
+msgstr "Enable JavaScript!"
+
+#: templates/disposable_notes/base.jinja2:110
+msgid "enable js description"
+msgstr ""
+"You can't use this site without JavaScript enabled! If your browser "
+"doesn't support JavaScript or you don't know what it is, download last "
+"version of Chrome or Firefox."
+
+#: templates/disposable_notes/base.jinja2:115
+msgid "war-banner-header"
+msgstr "We are against any military actions!"
+
+#: templates/disposable_notes/base.jinja2:117
+msgid "war-banner-text"
+msgstr ""
+"Any war or terrorism is unacceptable. Now we are doing our best to "
+"provide you the opportunity of safe messaging and data sharing, because "
+"we believe that taking care of privacy is very important today."
+
+#: templates/disposable_notes/base.jinja2:150
+msgid "contacts"
+msgstr "Contacts"
+
+#: templates/disposable_notes/base.jinja2:151
+msgid "articles"
+msgstr "Articles"
+
+#: templates/disposable_notes/base.jinja2:152
+msgid "FAQ"
+msgstr "FAQ"
+
+#: templates/disposable_notes/base.jinja2:153
+#: templates/disposable_notes/errors/construction.jinja2:11861
+msgid "lang alt"
+msgstr "<a href='' onclick=\"change_lang('ru')\">Русский</a>"
+
+#: templates/disposable_notes/create_note.jinja2:3
+msgid "site description"
+msgstr ""
+"Private-Net.work is a service, that helps hiding the most private data "
+"from third parties while sending it through the messenger. Instead of "
+"sharing this data in the clear, send a link to the one-time note, "
+"generated with this site. The note will be deleted after the first read. "
+"And we also can't read your notes, as their are encrypted with your "
+"browser."
+
+#: templates/disposable_notes/create_note.jinja2:6
+#, python-format
+msgid "%(sitename)s"
+msgstr "%(sitename)s — one-time notes for safe data sharing"
+
+#: templates/disposable_notes/create_note.jinja2:110
+msgid "create note h1 header"
+msgstr "Create note"
+
+#: templates/disposable_notes/create_note.jinja2:114
+#: templates/disposable_notes/view_note.jinja2:65
+msgid "ad banner header"
+msgstr "Create a one-time note that will be destroyed after the first reading."
+
+#: templates/disposable_notes/create_note.jinja2:115
+#: templates/disposable_notes/view_note.jinja2:66
+msgid "ad banner description"
+msgstr ""
+"Share private data in messengers, using note links, so that third parties"
+" couldn't read it!"
+
+#: templates/disposable_notes/create_note.jinja2:117
+#: templates/disposable_notes/view_note.jinja2:67
+msgid "ad banner act link"
+msgstr "Read more..."
+
+#: templates/disposable_notes/create_note.jinja2:123
+#: templates/disposable_notes/view_note.jinja2:73
+msgid "ad banner do not show again"
+msgstr "Do&nbsp;not&nbsp;show&nbsp;again"
+
+#: templates/disposable_notes/create_note.jinja2:136
+msgid "note content placeholder"
+msgstr "Note content"
+
+#: templates/disposable_notes/create_note.jinja2:148
+msgid "advanced options"
+msgstr "Advanced&nbsp;options"
+
+#: templates/disposable_notes/create_note.jinja2:158
+msgid "also delete in"
+msgstr "Also delete note in"
+
+#: templates/disposable_notes/create_note.jinja2:160
+msgid "7 days"
+msgstr "7 days"
+
+#: templates/disposable_notes/create_note.jinja2:161
+msgid "2 days"
+msgstr "2 days"
+
+#: templates/disposable_notes/create_note.jinja2:162
+msgid "1 day"
+msgstr "1 day"
+
+#: templates/disposable_notes/create_note.jinja2:163
+msgid "12 hours"
+msgstr "12 hours"
+
+#: templates/disposable_notes/create_note.jinja2:164
+msgid "2 hours"
+msgstr "2 hours"
+
+#: templates/disposable_notes/create_note.jinja2:165
+msgid "1 hour"
+msgstr "1 hours"
+
+#: templates/disposable_notes/create_note.jinja2:166
+msgid "30 minutes"
+msgstr "30 hours"
+
+#: templates/disposable_notes/create_note.jinja2:167
+msgid "15 minutes"
+msgstr "15 hours"
+
+#: templates/disposable_notes/create_note.jinja2:168
+msgid "5 minutes"
+msgstr "5 hours"
+
+#: templates/disposable_notes/create_note.jinja2:171
+msgid "file input label"
+msgstr "Send a file (instead of text)"
+
+#: templates/disposable_notes/create_note.jinja2:179
+#: templates/disposable_notes/js/create_note.js:80
+#: templates/disposable_notes/js/create_note.js:111
+msgid "create note btn"
+msgstr "Create note"
+
+#: templates/disposable_notes/formatting.jinja2:3
+msgid "formatting description"
+msgstr ""
+"Learn, how to format one-time notes to share your private data in easy-"
+"to-read format"
+
+#: templates/disposable_notes/formatting.jinja2:6
+msgid "formatting title"
+msgstr "Formatting a note"
+
+#: templates/disposable_notes/formatting.jinja2:53
+msgid "formatting bc about"
+msgstr "How it works"
+
+#: templates/disposable_notes/formatting.jinja2:58
+msgid "formatting bc articles"
+msgstr "Articles"
+
+#: templates/disposable_notes/formatting.jinja2:62
+#: templates/disposable_notes/formatting.jinja2:66
+msgid "formatting heading"
+msgstr "How to format a note"
+
+#: templates/disposable_notes/formatting.jinja2:68
+msgid "formatting text"
+msgstr ""
+"We always escape symbols from the note decrypted text in reader's browser"
+" for security reasons. But some HTML tags can be used for note formatting"
+" and we even added our own tags. Below is a table, where you can see, how"
+" to use all these tags."
+
+#: templates/disposable_notes/formatting.jinja2:77
+#: templates/disposable_notes/formatting.jinja2:83
+msgid "link"
+msgstr "Link"
+
+#: templates/disposable_notes/formatting.jinja2:91
+#: templates/disposable_notes/formatting.jinja2:97
+#: templates/disposable_notes/formatting.jinja2:105
+#: templates/disposable_notes/formatting.jinja2:111
+#: templates/disposable_notes/formatting.jinja2:119
+#: templates/disposable_notes/formatting.jinja2:125
+#: templates/disposable_notes/formatting.jinja2:133
+#: templates/disposable_notes/formatting.jinja2:139
+#: templates/disposable_notes/formatting.jinja2:147
+#: templates/disposable_notes/formatting.jinja2:153
+#: templates/disposable_notes/formatting.jinja2:161
+#: templates/disposable_notes/formatting.jinja2:167
+#: templates/disposable_notes/formatting.jinja2:175
+#: templates/disposable_notes/formatting.jinja2:181
+#: templates/disposable_notes/formatting.jinja2:189
+#: templates/disposable_notes/formatting.jinja2:195
+#: templates/disposable_notes/formatting.jinja2:203
+#: templates/disposable_notes/formatting.jinja2:209
+#: templates/disposable_notes/formatting.jinja2:217
+#: templates/disposable_notes/formatting.jinja2:223
+#: templates/disposable_notes/formatting.jinja2:231
+#: templates/disposable_notes/formatting.jinja2:237
+#: templates/disposable_notes/formatting.jinja2:245
+#: templates/disposable_notes/formatting.jinja2:251
+#: templates/disposable_notes/formatting.jinja2:259
+#: templates/disposable_notes/formatting.jinja2:265
+#: templates/disposable_notes/formatting.jinja2:273
+#: templates/disposable_notes/formatting.jinja2:279
+msgid "text"
+msgstr "Text"
+
+#: templates/disposable_notes/formatting.jinja2:303
+msgid "formatting new line"
+msgstr "New line"
+
+#: templates/disposable_notes/formatting.jinja2:309
+msgid "formatting example heading"
+msgstr "Example of a formatted note"
+
+#: templates/disposable_notes/formatting.jinja2:310
+msgid "formatting text heading"
+msgstr "Content of the note to be written"
+
+#: templates/disposable_notes/formatting.jinja2:314
+msgid "formatting text 1"
+msgstr "<lp>Hello, <i>Peter</i>!</p>"
+
+#: templates/disposable_notes/formatting.jinja2:315
+msgid "formatting text 2"
+msgstr ""
+"In this note I'd like to share <u>connection credentials <b>with "
+"you</b></u>.<br>"
+
+#: templates/disposable_notes/formatting.jinja2:316
+msgid "formatting text 3"
+msgstr "<h3><gspan>Login</span> credentials:</h3>"
+
+#: templates/disposable_notes/formatting.jinja2:317
+msgid "formatting text 4"
+msgstr "<lp><i>Login:</i> <ms>admin</ms></p>"
+
+#: templates/disposable_notes/formatting.jinja2:318
+msgid "formatting text 5"
+msgstr "<lp><i>Password:</i> <ms>jd74nf720kg</ms></p>"
+
+#: templates/disposable_notes/formatting.jinja2:319
+msgid "formatting text 6"
+msgstr ""
+"<hr><b>Please, save this password in a <rspan>safe place</span>, before "
+"closing this note.</b>"
+
+#: templates/disposable_notes/formatting.jinja2:320
+msgid "formatting text 7"
+msgstr ""
+"You can connect to the system <a href=\"https://private-"
+"net.work\">here</a>."
+
+#: templates/disposable_notes/formatting.jinja2:323
+msgid "formatting example content heading"
+msgstr "Note content as it will be viewed by the reader"
+
+#: templates/disposable_notes/formatting.jinja2:325
+msgid "formatting example content"
+msgstr ""
+"<p style=\"text-align: left\">Hello, <i>Peter</i>!</p><br>In this note "
+"I'd like to share <u>connection credentials <b>with "
+"you</b></u>.<br><br><h3><span style=\"color: green\">Login</span> "
+"credentials:</h3><br><p style=\"text-align: left\"><i>Login:</i> <span "
+"class=\"user-select-all font-monospace\">admin</span></p><br><p style"
+"=\"text-align: left\"><i>Password:</i> <span class=\"user-select-all "
+"font-monospace\">jd74nf720kg</span></p><br><hr style=\"height: 2px; "
+"color: black\"><b>Please, save this password in a <span style=\"color: "
+"red\">safe place</span>, before closing this note.</b><br>You can connect"
+" to the system <a href=\"https://private-net.work\">here</a>."
+
+#: templates/disposable_notes/support.jinja2:3
+msgid "support page title"
+msgstr "Contacts"
+
+#: templates/disposable_notes/support.jinja2:48
+msgid "support heading"
+msgstr "How to contact us"
+
+#: templates/disposable_notes/support.jinja2:54
+msgid "support in"
+msgstr "Support in"
+
+#: templates/disposable_notes/support.jinja2:72
+msgid "mail addresses"
+msgstr "E-mail addresses"
+
+#: templates/disposable_notes/support.jinja2:75
+msgid "support email label"
+msgstr "For your questions and suggestions:"
+
+#: templates/disposable_notes/support.jinja2:84
+msgid "support error email label"
+msgstr "To report errors, bugs and vulnerabilities:"
+
+#: templates/disposable_notes/view_note.jinja2:3
+msgid "view note page title"
+msgstr "View note"
+
+#: templates/disposable_notes/view_note.jinja2:40
+msgid "view note heading"
+msgstr "One-time note"
+
+#: templates/disposable_notes/view_note.jinja2:45
+msgid "view note warning header"
+msgstr "You can view the following information only ONCE!"
+
+#: templates/disposable_notes/view_note.jinja2:46
+msgid "view note warning description"
+msgstr ""
+"If you don't save important data, you will have to ask the sender to "
+"create a new note for you. Are you sure to view this note now?"
+
+#: templates/disposable_notes/view_note.jinja2:48
+msgid "view note btn"
+msgstr "Yes, I'm sure"
+
+#: templates/disposable_notes/view_note.jinja2:56
+msgid "view note 404 header"
+msgstr "This note has been already read"
+
+#: templates/disposable_notes/view_note.jinja2:57
+msgid "view note 404 description"
+msgstr ""
+"If you haven't viewed this note before, then it has expired or a third "
+"party has read it, be careful!!! If you haven't saved important data, ask"
+" the sender to create a new note."
+
+#: templates/disposable_notes/errors/basic_error.jinja2:56
+#: templates/disposable_notes/errors/construction.jinja2:11841
+msgid "Ошибка"
+msgstr "Error"
+
+#: templates/disposable_notes/errors/basic_error.jinja2:58
+#: templates/disposable_notes/errors/construction.jinja2:11843
+msgid "Контакты администратора"
+msgstr "Administrator contacts"
+
+#~ msgid "formatting monospace"
+#~ msgstr "Selectable monospace text"
+
