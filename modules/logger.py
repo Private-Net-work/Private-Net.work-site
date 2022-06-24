@@ -1,6 +1,7 @@
 import datetime
 import hashlib
 import logging
+import os
 import traceback
 from logging.handlers import TimedRotatingFileHandler
 
@@ -32,6 +33,8 @@ class TgHandler(logging.StreamHandler):
         logger.info(str(res))
 
 
+if not os.path.exists("logs"):
+    os.mkdir("logs")
 tg_handler = TgHandler()
 tg_handler.setLevel(logging.ERROR)
 tg_handler.setFormatter(logging.Formatter(

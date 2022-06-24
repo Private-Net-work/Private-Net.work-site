@@ -36,8 +36,10 @@ Stats.create_fields()
 def get_locale():
     if request.cookies.get('lang'):
         return request.cookies.get('lang')
-    if request.headers.get("Cf-Ipcountry", "NoCountry") == "RU":
+    if request.args.get("lang") == "ru" or request.headers.get("Cf-Ipcountry", "NoCountry") == "RU":
         return "ru"
+    elif request.args.get("lang") == "en":
+        return "en"
     return request.accept_languages.best_match(app.config["LANGUAGES"].keys())
 
 

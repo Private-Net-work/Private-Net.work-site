@@ -1,3 +1,4 @@
+import os
 import sqlalchemy as sa
 import sqlalchemy.ext.declarative as dec
 import sqlalchemy.orm as orm
@@ -18,6 +19,8 @@ def global_init(db_file):
         raise Exception("Path to database file is required")
 
     conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
+    if not os.path.exists("data/db"):
+        os.mkdir("data/db")
     print(f"Connecting to DB {conn_str}")
 
     engine = sa.create_engine(conn_str, echo=False)
