@@ -1,122 +1,123 @@
-# Translations template for Private-Net.work site.
-# Copyright (C) 2022 Private-Net.work
-# This file is distributed under the same license as the Private-Net.work site project.
-# Private-Net.work <support@private-net.work>, 2022.
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.0\n"
-"Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-03-02 21:37+0300\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-06-25 18:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Private-Net.work <support@private-net.work>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
-#: blueprints/errorhandling.py:18
+#: blueprints/errorhandling.py:19
 msgid "Bad request"
 msgstr ""
 
-#: blueprints/errorhandling.py:19
+#: blueprints/errorhandling.py:20
 msgid "400 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:24
+#: blueprints/errorhandling.py:25
 msgid "Forbidden"
 msgstr ""
 
-#: blueprints/errorhandling.py:25
+#: blueprints/errorhandling.py:26
 msgid "403 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:30
+#: blueprints/errorhandling.py:31
 msgid "Not found"
 msgstr ""
 
-#: blueprints/errorhandling.py:31
+#: blueprints/errorhandling.py:32
 msgid "404 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:36
+#: blueprints/errorhandling.py:37
 msgid "Unallowed method"
 msgstr ""
 
-#: blueprints/errorhandling.py:37
+#: blueprints/errorhandling.py:38
 msgid "405 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:42
+#: blueprints/errorhandling.py:43
 msgid "Internal Server Error"
 msgstr ""
 
-#: blueprints/errorhandling.py:43 modules/logger.py:96
+#: blueprints/errorhandling.py:44 modules/logger.py:100
 msgid "500 description"
 msgstr ""
 
-#: blueprints/pseudo_static.py:17
+#: blueprints/pseudo_static.py:16
 msgid "Некорректная длина записки!"
 msgstr ""
 
-#: blueprints/pseudo_static.py:18
+#: blueprints/pseudo_static.py:17
 msgid "link info"
 msgstr ""
 
-#: blueprints/pseudo_static.py:19
+#: blueprints/pseudo_static.py:18
 msgid "Скопировать"
 msgstr ""
 
-#: blueprints/pseudo_static.py:20
+#: blueprints/pseudo_static.py:19
 msgid "Скопировано"
 msgstr ""
 
-#: blueprints/pseudo_static.py:21
+#: blueprints/pseudo_static.py:20
 msgid "js 400 error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+#: blueprints/pseudo_static.py:21 blueprints/pseudo_static.py:35
 msgid "js 500 error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:23 blueprints/pseudo_static.py:37
+#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
 msgid "js unknown error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:24
+#: blueprints/pseudo_static.py:23
 msgid "heavy doc"
 msgstr ""
 
-#: blueprints/pseudo_static.py:25
+#: blueprints/pseudo_static.py:24
 msgid "heavy content"
 msgstr ""
 
-#: blueprints/pseudo_static.py:33
+#: blueprints/pseudo_static.py:32
 msgid "js save data"
 msgstr ""
 
-#: blueprints/pseudo_static.py:34
+#: blueprints/pseudo_static.py:33
 msgid "Выйти"
 msgstr ""
 
-#: blueprints/pseudo_static.py:35
+#: blueprints/pseudo_static.py:34
 msgid "js already read"
 msgstr ""
 
-#: blueprints/pseudo_static.py:38
+#: blueprints/pseudo_static.py:37
 msgid "download file"
 msgstr ""
 
-#: modules/logger.py:54
+#: modules/logger.py:58
 msgid "Проводятся технические работы"
 msgstr ""
 
-#: modules/logger.py:55
+#: modules/logger.py:59
 msgid "construction description"
 msgstr ""
 
-#: modules/logger.py:95
+#: modules/logger.py:99
 msgid "Internal server error"
 msgstr ""
 
@@ -158,88 +159,92 @@ msgstr ""
 msgid "articles heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:122
+#: templates/disposable_notes/about_notes.jinja2:124
 msgid "article formatting link"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:126
-msgid "faq heading"
-msgstr ""
-
-#: templates/disposable_notes/about_notes.jinja2:130
-#: templates/disposable_notes/about_notes.jinja2:159
-msgid "faq can-admins-see-note-content heading "
+#: templates/disposable_notes/about_notes.jinja2:131
+msgid "source code link"
 msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:135
-#: templates/disposable_notes/about_notes.jinja2:170
+msgid "faq heading"
+msgstr ""
+
+#: templates/disposable_notes/about_notes.jinja2:139
+#: templates/disposable_notes/about_notes.jinja2:168
+msgid "faq can-admins-see-note-content heading "
+msgstr ""
+
+#: templates/disposable_notes/about_notes.jinja2:144
+#: templates/disposable_notes/about_notes.jinja2:179
 msgid "faq sharing-decrypted-note-content heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:140
-#: templates/disposable_notes/about_notes.jinja2:177
+#: templates/disposable_notes/about_notes.jinja2:149
+#: templates/disposable_notes/about_notes.jinja2:186
 msgid "faq note-data heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:145
-#: templates/disposable_notes/about_notes.jinja2:202
+#: templates/disposable_notes/about_notes.jinja2:154
+#: templates/disposable_notes/about_notes.jinja2:211
 msgid "faq storing-ip heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:150
-#: templates/disposable_notes/about_notes.jinja2:209
+#: templates/disposable_notes/about_notes.jinja2:159
+#: templates/disposable_notes/about_notes.jinja2:218
 msgid "faq stats heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:155
-#: templates/disposable_notes/about_notes.jinja2:216
+#: templates/disposable_notes/about_notes.jinja2:164
+#: templates/disposable_notes/about_notes.jinja2:225
 msgid "faq ads heading"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:161
-#: templates/disposable_notes/about_notes.jinja2:172
-#: templates/disposable_notes/about_notes.jinja2:179
-#: templates/disposable_notes/about_notes.jinja2:204
-#: templates/disposable_notes/about_notes.jinja2:211
-#: templates/disposable_notes/about_notes.jinja2:218
+#: templates/disposable_notes/about_notes.jinja2:170
+#: templates/disposable_notes/about_notes.jinja2:181
+#: templates/disposable_notes/about_notes.jinja2:188
+#: templates/disposable_notes/about_notes.jinja2:213
+#: templates/disposable_notes/about_notes.jinja2:220
+#: templates/disposable_notes/about_notes.jinja2:227
 msgid "copy link"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:165
+#: templates/disposable_notes/about_notes.jinja2:174
 msgid "faq can-admins-see-note-content 1"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:168
+#: templates/disposable_notes/about_notes.jinja2:177
 msgid "faq can-admins-see-note-content 2"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:176
+#: templates/disposable_notes/about_notes.jinja2:185
 msgid "faq sharing-decrypted-note-content"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:183
+#: templates/disposable_notes/about_notes.jinja2:192
 msgid "faq note-data"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:208
+#: templates/disposable_notes/about_notes.jinja2:217
 msgid "faq storing-ip"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:215
+#: templates/disposable_notes/about_notes.jinja2:224
 msgid "faq stats"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:222
+#: templates/disposable_notes/about_notes.jinja2:231
 msgid "faq ads"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:225
-#: templates/disposable_notes/formatting.jinja2:329
+#: templates/disposable_notes/about_notes.jinja2:234
+#: templates/disposable_notes/formatting.jinja2:344
 msgid "did not get answer"
 msgstr ""
 
-#: templates/disposable_notes/about_notes.jinja2:226
-#: templates/disposable_notes/formatting.jinja2:330
+#: templates/disposable_notes/about_notes.jinja2:235
+#: templates/disposable_notes/formatting.jinja2:345
 msgid "write us link"
 msgstr ""
 
@@ -251,36 +256,28 @@ msgstr ""
 msgid "site keywords"
 msgstr ""
 
-#: templates/disposable_notes/base.jinja2:109
+#: templates/disposable_notes/base.jinja2:103
 msgid "enable js heading"
 msgstr ""
 
-#: templates/disposable_notes/base.jinja2:110
+#: templates/disposable_notes/base.jinja2:104
 msgid "enable js description"
 msgstr ""
 
-#: templates/disposable_notes/base.jinja2:115
-msgid "war-banner-header"
-msgstr ""
-
-#: templates/disposable_notes/base.jinja2:117
-msgid "war-banner-text"
-msgstr ""
-
-#: templates/disposable_notes/base.jinja2:150
+#: templates/disposable_notes/base.jinja2:134
 msgid "contacts"
 msgstr ""
 
-#: templates/disposable_notes/base.jinja2:151
-msgid "articles"
-msgstr ""
-
-#: templates/disposable_notes/base.jinja2:152
+#: templates/disposable_notes/base.jinja2:135
 msgid "FAQ"
 msgstr ""
 
-#: templates/disposable_notes/base.jinja2:153
-#: templates/disposable_notes/errors/construction.jinja2:11861
+#: templates/disposable_notes/base.jinja2:136
+msgid "donate"
+msgstr ""
+
+#: templates/disposable_notes/base.jinja2:137
+#: templates/disposable_notes/errors/construction.jinja2:11859
 msgid "lang alt"
 msgstr ""
 
@@ -298,22 +295,22 @@ msgid "create note h1 header"
 msgstr ""
 
 #: templates/disposable_notes/create_note.jinja2:114
-#: templates/disposable_notes/view_note.jinja2:65
+#: templates/disposable_notes/view_note.jinja2:55
 msgid "ad banner header"
 msgstr ""
 
 #: templates/disposable_notes/create_note.jinja2:115
-#: templates/disposable_notes/view_note.jinja2:66
+#: templates/disposable_notes/view_note.jinja2:56
 msgid "ad banner description"
 msgstr ""
 
 #: templates/disposable_notes/create_note.jinja2:117
-#: templates/disposable_notes/view_note.jinja2:67
+#: templates/disposable_notes/view_note.jinja2:58
 msgid "ad banner act link"
 msgstr ""
 
 #: templates/disposable_notes/create_note.jinja2:123
-#: templates/disposable_notes/view_note.jinja2:73
+#: templates/disposable_notes/view_note.jinja2:64
 msgid "ad banner do not show again"
 msgstr ""
 
@@ -401,86 +398,88 @@ msgid "formatting text"
 msgstr ""
 
 #: templates/disposable_notes/formatting.jinja2:77
-#: templates/disposable_notes/formatting.jinja2:83
+#: templates/disposable_notes/formatting.jinja2:84
 msgid "link"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:91
-#: templates/disposable_notes/formatting.jinja2:97
-#: templates/disposable_notes/formatting.jinja2:105
-#: templates/disposable_notes/formatting.jinja2:111
-#: templates/disposable_notes/formatting.jinja2:119
-#: templates/disposable_notes/formatting.jinja2:125
-#: templates/disposable_notes/formatting.jinja2:133
-#: templates/disposable_notes/formatting.jinja2:139
-#: templates/disposable_notes/formatting.jinja2:147
-#: templates/disposable_notes/formatting.jinja2:153
-#: templates/disposable_notes/formatting.jinja2:161
-#: templates/disposable_notes/formatting.jinja2:167
-#: templates/disposable_notes/formatting.jinja2:175
-#: templates/disposable_notes/formatting.jinja2:181
-#: templates/disposable_notes/formatting.jinja2:189
-#: templates/disposable_notes/formatting.jinja2:195
-#: templates/disposable_notes/formatting.jinja2:203
-#: templates/disposable_notes/formatting.jinja2:209
-#: templates/disposable_notes/formatting.jinja2:217
-#: templates/disposable_notes/formatting.jinja2:223
-#: templates/disposable_notes/formatting.jinja2:231
-#: templates/disposable_notes/formatting.jinja2:237
-#: templates/disposable_notes/formatting.jinja2:245
-#: templates/disposable_notes/formatting.jinja2:251
-#: templates/disposable_notes/formatting.jinja2:259
-#: templates/disposable_notes/formatting.jinja2:265
-#: templates/disposable_notes/formatting.jinja2:273
-#: templates/disposable_notes/formatting.jinja2:279
+#: templates/disposable_notes/formatting.jinja2:92
+#: templates/disposable_notes/formatting.jinja2:98
+#: templates/disposable_notes/formatting.jinja2:106
+#: templates/disposable_notes/formatting.jinja2:112
+#: templates/disposable_notes/formatting.jinja2:120
+#: templates/disposable_notes/formatting.jinja2:126
+#: templates/disposable_notes/formatting.jinja2:134
+#: templates/disposable_notes/formatting.jinja2:140
+#: templates/disposable_notes/formatting.jinja2:148
+#: templates/disposable_notes/formatting.jinja2:154
+#: templates/disposable_notes/formatting.jinja2:162
+#: templates/disposable_notes/formatting.jinja2:168
+#: templates/disposable_notes/formatting.jinja2:176
+#: templates/disposable_notes/formatting.jinja2:182
+#: templates/disposable_notes/formatting.jinja2:190
+#: templates/disposable_notes/formatting.jinja2:196
+#: templates/disposable_notes/formatting.jinja2:204
+#: templates/disposable_notes/formatting.jinja2:210
+#: templates/disposable_notes/formatting.jinja2:218
+#: templates/disposable_notes/formatting.jinja2:224
+#: templates/disposable_notes/formatting.jinja2:232
+#: templates/disposable_notes/formatting.jinja2:238
+#: templates/disposable_notes/formatting.jinja2:246
+#: templates/disposable_notes/formatting.jinja2:252
+#: templates/disposable_notes/formatting.jinja2:260
+#: templates/disposable_notes/formatting.jinja2:266
+#: templates/disposable_notes/formatting.jinja2:274
+#: templates/disposable_notes/formatting.jinja2:280
+#: templates/disposable_notes/formatting.jinja2:288
+#: templates/disposable_notes/formatting.jinja2:294
 msgid "text"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:303
+#: templates/disposable_notes/formatting.jinja2:318
 msgid "formatting new line"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:309
+#: templates/disposable_notes/formatting.jinja2:324
 msgid "formatting example heading"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:310
+#: templates/disposable_notes/formatting.jinja2:325
 msgid "formatting text heading"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:314
+#: templates/disposable_notes/formatting.jinja2:329
 msgid "formatting text 1"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:315
+#: templates/disposable_notes/formatting.jinja2:330
 msgid "formatting text 2"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:316
+#: templates/disposable_notes/formatting.jinja2:331
 msgid "formatting text 3"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:317
+#: templates/disposable_notes/formatting.jinja2:332
 msgid "formatting text 4"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:318
+#: templates/disposable_notes/formatting.jinja2:333
 msgid "formatting text 5"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:319
+#: templates/disposable_notes/formatting.jinja2:334
 msgid "formatting text 6"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:320
+#: templates/disposable_notes/formatting.jinja2:335
 msgid "formatting text 7"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:323
+#: templates/disposable_notes/formatting.jinja2:338
 msgid "formatting example content heading"
 msgstr ""
 
-#: templates/disposable_notes/formatting.jinja2:325
+#: templates/disposable_notes/formatting.jinja2:340
 msgid "formatting example content"
 msgstr ""
 
@@ -528,21 +527,13 @@ msgstr ""
 msgid "view note btn"
 msgstr ""
 
-#: templates/disposable_notes/view_note.jinja2:56
-msgid "view note 404 header"
-msgstr ""
-
-#: templates/disposable_notes/view_note.jinja2:57
-msgid "view note 404 description"
-msgstr ""
-
 #: templates/disposable_notes/errors/basic_error.jinja2:56
-#: templates/disposable_notes/errors/construction.jinja2:11841
+#: templates/disposable_notes/errors/construction.jinja2:11839
 msgid "Ошибка"
 msgstr ""
 
 #: templates/disposable_notes/errors/basic_error.jinja2:58
-#: templates/disposable_notes/errors/construction.jinja2:11843
+#: templates/disposable_notes/errors/construction.jinja2:11841
 msgid "Контакты администратора"
 msgstr ""
 

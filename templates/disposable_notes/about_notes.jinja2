@@ -116,10 +116,19 @@
     <h1>{{ _('about main heading') }}</h1>
     <div class="white lead">{{ _('about service description') }}</div>
     <h3 class="display-3" id="articles">{{ _('articles heading') }}</h3>
-    <ul id="articles-list">
+    <ul id="articles-list" style="list-style-type: none;">
         <li style="text-align: left; color: white">
             <a href="{{ url_for('notes.formatting') }}" class="lead">
+                <img src="{{ url_for('static', filename='svg/code-slash.svg') }}" width="20px" height="20px"
+                     alt="GitHub" style="padding-bottom: 3px">
                 {{ _('article formatting link') }}
+            </a>
+        </li>
+        <li style="text-align: left; color: white">
+            <a href="https://github.com/Private-Net-work/Private-Net.work-site" class="lead" target="_blank">
+                <img src="{{ url_for('static', filename='svg/github.svg') }}" width="20px" height="20px"
+                     alt="GitHub" style="padding-bottom: 3px">
+                {{ _('source code link') }}
             </a>
         </li>
     </ul>
@@ -132,7 +141,7 @@
         </li>
         <li>
             <a href="#sharing-decrypted-note-content">
-                {{ _('faq sharing-decrypted-note-content heading') }}v
+                {{ _('faq sharing-decrypted-note-content heading') }}
             </a>
         </li>
         <li>
@@ -158,7 +167,7 @@
     </ul>
     <h5 id="can-admins-see-note-content" class="position-relative">{{ _('faq can-admins-see-note-content heading ') }}
         <a href="#can-admins-see-note-content" class="stretched-link anchor">
-            <img alt="{{ _('copy link') }}Скопировать ссылку"
+            <img alt="{{ _('copy link') }}"
                  src="{{ url_for('static', filename='svg/hashtag.svg') }}"/>
         </a>
     </h5>
