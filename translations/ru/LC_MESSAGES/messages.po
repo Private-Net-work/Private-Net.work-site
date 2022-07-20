@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-06-25 18:26+0300\n"
+"POT-Creation-Date: 2022-07-20 23:42+0300\n"
 "PO-Revision-Date: 2022-01-13 19:26+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: ru\n"
@@ -164,6 +164,7 @@ msgstr "Как это работает"
 
 #: templates/disposable_notes/about_notes.jinja2:112
 #: templates/disposable_notes/create_note.jinja2:103
+#: templates/disposable_notes/donate.jinja2:46
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -173,6 +174,7 @@ msgstr "Новая записка"
 
 #: templates/disposable_notes/about_notes.jinja2:113
 #: templates/disposable_notes/create_note.jinja2:106
+#: templates/disposable_notes/donate.jinja2:47
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -506,6 +508,15 @@ msgstr "Отправьте файл (вместо текста записки)"
 msgid "create note btn"
 msgstr "Создать записку"
 
+#: templates/disposable_notes/donate.jinja2:3
+#: templates/disposable_notes/support.jinja2:3
+msgid "support page title"
+msgstr "Контакты"
+
+#: templates/disposable_notes/donate.jinja2:50
+msgid "donate heading"
+msgstr "Поддержать проект"
+
 #: templates/disposable_notes/formatting.jinja2:3
 msgid "formatting description"
 msgstr ""
@@ -642,10 +653,6 @@ msgstr ""
 "red\">надёжном месте</span>, прежде чем закрывать            записку.</b>"
 "        <br>        Подключиться к системе можно <a href=\"https"
 "://private-net.work\">здесь</a>."
-
-#: templates/disposable_notes/support.jinja2:3
-msgid "support page title"
-msgstr "Контакты"
 
 #: templates/disposable_notes/support.jinja2:48
 msgid "support heading"

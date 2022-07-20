@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-25 18:26+0300\n"
+"POT-Creation-Date: 2022-07-20 23:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,6 +131,7 @@ msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:112
 #: templates/disposable_notes/create_note.jinja2:103
+#: templates/disposable_notes/donate.jinja2:46
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -140,6 +141,7 @@ msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:113
 #: templates/disposable_notes/create_note.jinja2:106
+#: templates/disposable_notes/donate.jinja2:47
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -372,6 +374,15 @@ msgstr ""
 msgid "create note btn"
 msgstr ""
 
+#: templates/disposable_notes/donate.jinja2:3
+#: templates/disposable_notes/support.jinja2:3
+msgid "support page title"
+msgstr ""
+
+#: templates/disposable_notes/donate.jinja2:50
+msgid "donate heading"
+msgstr ""
+
 #: templates/disposable_notes/formatting.jinja2:3
 msgid "formatting description"
 msgstr ""
@@ -481,10 +492,6 @@ msgstr ""
 
 #: templates/disposable_notes/formatting.jinja2:340
 msgid "formatting example content"
-msgstr ""
-
-#: templates/disposable_notes/support.jinja2:3
-msgid "support page title"
 msgstr ""
 
 #: templates/disposable_notes/support.jinja2:48
