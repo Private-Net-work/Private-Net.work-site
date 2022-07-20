@@ -25,11 +25,13 @@
 
         .address {
             padding: 20px;
+            max-width: 65%;
         }
 
         .address p {
             color: black;
             margin: auto;
+            word-break: break-all;
         }
 
         .qr {
@@ -181,6 +183,15 @@
         <div class="address">
             <h4 class="name">Tron, TRX</h4>
             <p class="user-select-all">{{ trx }}</p>
+        </div>
+    </div>
+    <div id="xmr" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/xmr.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Monero, XMR</h4>
+            <p class="user-select-all">{{ xmr }}</p>
         </div>
     </div>
     <div id="shib-erc20" class="wallet d-flex flex-wrap">

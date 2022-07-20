@@ -70,6 +70,7 @@ def donate():
     xrp = "rnwWE36sYAscpmUY5bgR9gGGfTHmtRf8Bw"
     doge = "DR2DhCXnW6T9QK8K6yoqG64Ro1yT7HoWDR"
     ltc = "ltc1q6nur0ym53vemtfs0wrsm6skktln4amfs6kgzsk"
+    xmr = "8Agen4JiAMYEnwyhyyDKkZLZUuhVFwQqiTYGuocJ15svBv3FBg2gzzyjU6D5tCWhZcDKxZb8VQ2zm1gZXNx1H2n9Li6HmyF"
     return render_template("disposable_notes/donate.jinja2",
-                           btc=btc, eth=eth, trx=trx, bnb=bnb, xrp=xrp, doge=doge, ltc=ltc,
+                           btc=btc, eth=eth, trx=trx, bnb=bnb, xrp=xrp, doge=doge, ltc=ltc, xmr=xmr,
                            year=datetime.datetime.now().year)

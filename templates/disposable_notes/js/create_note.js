@@ -103,6 +103,8 @@ function create_note() {
                 "            style=\"width: 100%\">{{ data['Скопировать'] }}</button>" +
                 "  </div>" +
                 "</div>";
+            document.getElementById("donate-banner").style.display = "";
+            document.getElementById("description-banner").style.display = "none";
         }, error: function (xhr, ajaxOptions, thrownError) {
             let btn = document.getElementById("submit-btn");
             btn.style.backgroundColor = "";

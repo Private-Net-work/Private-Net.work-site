@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-20 23:42+0300\n"
+"POT-Creation-Date: 2022-07-21 00:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,8 +130,8 @@ msgid "about title"
 msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:112
-#: templates/disposable_notes/create_note.jinja2:103
-#: templates/disposable_notes/donate.jinja2:46
+#: templates/disposable_notes/create_note.jinja2:108
+#: templates/disposable_notes/donate.jinja2:48
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -140,8 +140,8 @@ msgid "nav create note"
 msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:113
-#: templates/disposable_notes/create_note.jinja2:106
-#: templates/disposable_notes/donate.jinja2:47
+#: templates/disposable_notes/create_note.jinja2:111
+#: templates/disposable_notes/donate.jinja2:49
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -271,11 +271,12 @@ msgid "contacts"
 msgstr ""
 
 #: templates/disposable_notes/base.jinja2:135
-msgid "FAQ"
+#: templates/disposable_notes/create_note.jinja2:195
+msgid "donate"
 msgstr ""
 
 #: templates/disposable_notes/base.jinja2:136
-msgid "donate"
+msgid "FAQ"
 msgstr ""
 
 #: templates/disposable_notes/base.jinja2:137
@@ -292,86 +293,94 @@ msgstr ""
 msgid "%(sitename)s"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:110
+#: templates/disposable_notes/create_note.jinja2:115
 msgid "create note h1 header"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:114
+#: templates/disposable_notes/create_note.jinja2:119
 #: templates/disposable_notes/view_note.jinja2:55
 msgid "ad banner header"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:115
+#: templates/disposable_notes/create_note.jinja2:120
 #: templates/disposable_notes/view_note.jinja2:56
 msgid "ad banner description"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:117
+#: templates/disposable_notes/create_note.jinja2:122
 #: templates/disposable_notes/view_note.jinja2:58
 msgid "ad banner act link"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:123
+#: templates/disposable_notes/create_note.jinja2:128
 #: templates/disposable_notes/view_note.jinja2:64
 msgid "ad banner do not show again"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:136
+#: templates/disposable_notes/create_note.jinja2:141
 msgid "note content placeholder"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:148
+#: templates/disposable_notes/create_note.jinja2:153
 msgid "advanced options"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:158
+#: templates/disposable_notes/create_note.jinja2:163
 msgid "also delete in"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:160
+#: templates/disposable_notes/create_note.jinja2:165
 msgid "7 days"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:161
+#: templates/disposable_notes/create_note.jinja2:166
 msgid "2 days"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:162
+#: templates/disposable_notes/create_note.jinja2:167
 msgid "1 day"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:163
+#: templates/disposable_notes/create_note.jinja2:168
 msgid "12 hours"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:164
+#: templates/disposable_notes/create_note.jinja2:169
 msgid "2 hours"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:165
+#: templates/disposable_notes/create_note.jinja2:170
 msgid "1 hour"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:166
+#: templates/disposable_notes/create_note.jinja2:171
 msgid "30 minutes"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:167
+#: templates/disposable_notes/create_note.jinja2:172
 msgid "15 minutes"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:168
+#: templates/disposable_notes/create_note.jinja2:173
 msgid "5 minutes"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:171
+#: templates/disposable_notes/create_note.jinja2:176
 msgid "file input label"
 msgstr ""
 
-#: templates/disposable_notes/create_note.jinja2:179
+#: templates/disposable_notes/create_note.jinja2:184
 #: templates/disposable_notes/js/create_note.js:80
-#: templates/disposable_notes/js/create_note.js:111
+#: templates/disposable_notes/js/create_note.js:113
 msgid "create note btn"
+msgstr ""
+
+#: templates/disposable_notes/create_note.jinja2:190
+msgid "donate banner header"
+msgstr ""
+
+#: templates/disposable_notes/create_note.jinja2:191
+msgid "donate banner description"
 msgstr ""
 
 #: templates/disposable_notes/donate.jinja2:3
@@ -379,7 +388,7 @@ msgstr ""
 msgid "support page title"
 msgstr ""
 
-#: templates/disposable_notes/donate.jinja2:50
+#: templates/disposable_notes/donate.jinja2:52
 msgid "donate heading"
 msgstr ""
 

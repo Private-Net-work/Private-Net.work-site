@@ -96,6 +96,11 @@
         #deleteIn option {
             color: black;
         }
+
+        .donate-btn:hover {
+            background: none;
+            color: white;
+        }
     </style>
 {%- endblock %}
 {% block navlinks -%}
@@ -180,6 +185,11 @@
                 </a>
             </div>
         </form>
+    </div>
+    <div id="donate-banner" class="alert" style="display: none;">
+        <h3>{{ _('donate banner header') }}</h3>
+        <p> {{ _('donate banner description') }}</p>
+        <a href="{{ url_for('notes.donate') }}" class="btn btn-light donate-btn">{{ _('donate') }}</a>
     </div>
 {% endblock %}
 {% block endscripts -%}
