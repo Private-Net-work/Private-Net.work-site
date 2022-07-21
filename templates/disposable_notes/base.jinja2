@@ -93,17 +93,6 @@
             color: #c6c6c6;
             text-decoration: underline;
         }
-
-        #info-banner {
-            padding-top: 7px;
-            padding-bottom: 1px;
-            background-color: #ce0000;
-            width: 100%;
-        }
-
-        #info-banner p {
-            text-align: center;
-        }
     </style>
     {% block styles -%}{%- endblock %}
 </head>
@@ -143,8 +132,8 @@
         <div class="mt-auto text-white-50">
             <p style="padding-top: 10px;">
                 <a href="{{ url_for('notes.support') }}">{{ _('contacts') }}</a> &middot;
-                <a href="{{ url_for('notes.about_notes') }}#articles">{{ _('articles') }}</a> &middot;
-                <a href="{{ url_for('notes.about_notes') }}#faq">{{ _('FAQ') }}</a> &middot;
+                <a href="{{ url_for('notes.donate') }}">{{ _('donate') }}</a> &middot;
+                <a href="{{ url_for('notes.about_notes') }}#articles">{{ _('FAQ') }}</a> &middot;
                 {{ _('lang alt') }}
             </p>
             <p style="text-align: right; margin-right: 10px">&copy;

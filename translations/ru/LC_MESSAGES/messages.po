@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-03-02 21:37+0300\n"
+"POT-Creation-Date: 2022-07-21 21:12+0300\n"
 "PO-Revision-Date: 2022-01-13 19:26+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: ru\n"
@@ -20,54 +20,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: blueprints/errorhandling.py:18
+#: blueprints/errorhandling.py:19
 msgid "Bad request"
 msgstr "Ошибка в запросе"
 
-#: blueprints/errorhandling.py:19
+#: blueprints/errorhandling.py:20
 msgid "400 description"
 msgstr ""
 "Вы передали в запросе некорректные данные и сервер не смог их обработать."
 " <br>Если Вы считаете, что так произошло по нашей вине, свяжитесь с "
 "администратором сайта по контактам, указанным ниже."
 
-#: blueprints/errorhandling.py:24
+#: blueprints/errorhandling.py:25
 msgid "Forbidden"
 msgstr "Доступ запрещён"
 
-#: blueprints/errorhandling.py:25
+#: blueprints/errorhandling.py:26
 msgid "403 description"
 msgstr ""
 "У Вас нет прав для просмотра этой страницы. <br>Если Вы считаете, что так"
 " произошло по нашей вине, свяжитесь с администратором сайта по контактам,"
 " указанным ниже."
 
-#: blueprints/errorhandling.py:30
+#: blueprints/errorhandling.py:31
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: blueprints/errorhandling.py:31
+#: blueprints/errorhandling.py:32
 msgid "404 description"
 msgstr ""
 "Нам не удалось найти страницу, которую Вы пытаетесь открыть. Возможно, "
 "она была удалена. <br>Если Вы считаете, что так произошло по нашей вине, "
 "свяжитесь с администратором сайта по контактам, указанным ниже."
 
-#: blueprints/errorhandling.py:36
+#: blueprints/errorhandling.py:37
 msgid "Unallowed method"
 msgstr "Недопустимый метод"
 
-#: blueprints/errorhandling.py:37
+#: blueprints/errorhandling.py:38
 msgid "405 description"
 msgstr ""
 "Метод %(method)s, который Вы используете, не должен быть использован для "
 "открытия этой страницы."
 
-#: blueprints/errorhandling.py:42
+#: blueprints/errorhandling.py:43
 msgid "Internal Server Error"
 msgstr "Внутренняя ошибка сервера"
 
-#: blueprints/errorhandling.py:43 modules/logger.py:96
+#: blueprints/errorhandling.py:44 modules/logger.py:100
 msgid "500 description"
 msgstr ""
 "Поздравляем! Вам удалось сломать наш сайт :) <br>А если серьёзно, то у "
@@ -75,80 +75,80 @@ msgstr ""
 " администратором сайта по контактам, указанным ниже. Постараемся всё "
 "исправить."
 
-#: blueprints/pseudo_static.py:17
+#: blueprints/pseudo_static.py:16
 msgid "Некорректная длина записки!"
 msgstr "Некорректная длина записки!"
 
-#: blueprints/pseudo_static.py:18
+#: blueprints/pseudo_static.py:17
 msgid "link info"
 msgstr "Скопируйте ссылку на записку и отправьте своему собеседнику"
 
-#: blueprints/pseudo_static.py:19
+#: blueprints/pseudo_static.py:18
 msgid "Скопировать"
 msgstr "Скопировать"
 
-#: blueprints/pseudo_static.py:20
+#: blueprints/pseudo_static.py:19
 msgid "Скопировано"
 msgstr "Скопировано"
 
-#: blueprints/pseudo_static.py:21
+#: blueprints/pseudo_static.py:20
 msgid "js 400 error"
 msgstr ""
 "Произошла неизвестная ошибка (400). Пожалуйста, свяжитесь с "
 "администратором сайта по email errors@private-net.work и расскажите об "
 "этой проблеме. Приносим извинения за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+#: blueprints/pseudo_static.py:21 blueprints/pseudo_static.py:35
 msgid "js 500 error"
 msgstr ""
 "Внутренняя ошибка сервера (500). Пожалуйста, свяжитесь с администратором "
 "сайта по email errors@private-net.work и расскажите об этой проблеме. "
 "Приносим извинения за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:23 blueprints/pseudo_static.py:37
+#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
 msgid "js unknown error"
 msgstr ""
 "Произошла неизвестная ошибка. Пожалуйста, расскажите об этой проблеме "
 "администратору сайта по email errors@private-net.work. Приносим извинения"
 " за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:24
+#: blueprints/pseudo_static.py:23
 msgid "heavy doc"
 msgstr "Размер документа слишком велик (Допускается до 2 МБ)"
 
-#: blueprints/pseudo_static.py:25
+#: blueprints/pseudo_static.py:24
 msgid "heavy content"
 msgstr "Содержимое записки слишком большое"
 
-#: blueprints/pseudo_static.py:33
+#: blueprints/pseudo_static.py:32
 msgid "js save data"
 msgstr "Сохраните все нужные данные. Открыть их здесь больше не получится."
 
-#: blueprints/pseudo_static.py:34
+#: blueprints/pseudo_static.py:33
 msgid "Выйти"
 msgstr "Выйти"
 
-#: blueprints/pseudo_static.py:35
+#: blueprints/pseudo_static.py:34
 msgid "js already read"
 msgstr ""
 "Эта записка уже была просмотрена. Похоже, что это произошло пока Вы не "
 "подтверждали открытие записки. Код ошибки: 404."
 
-#: blueprints/pseudo_static.py:38
+#: blueprints/pseudo_static.py:37
 msgid "download file"
 msgstr "Скачать документ"
 
-#: modules/logger.py:54
+#: modules/logger.py:58
 msgid "Проводятся технические работы"
 msgstr "Проводятся технические работы"
 
-#: modules/logger.py:55
+#: modules/logger.py:59
 msgid "construction description"
 msgstr ""
 "Мы проводим обновление сайта. Совсем скоро всё заработает, но придётся "
 "немного подождать. Приносим извинения за доставленные неудобства!"
 
-#: modules/logger.py:95
+#: modules/logger.py:99
 msgid "Internal server error"
 msgstr "Внутренняя ошибка сервера"
 
@@ -163,7 +163,8 @@ msgid "about title"
 msgstr "Как это работает"
 
 #: templates/disposable_notes/about_notes.jinja2:112
-#: templates/disposable_notes/create_note.jinja2:103
+#: templates/disposable_notes/create_note.jinja2:134
+#: templates/disposable_notes/donate.jinja2:77
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -172,7 +173,8 @@ msgid "nav create note"
 msgstr "Новая записка"
 
 #: templates/disposable_notes/about_notes.jinja2:113
-#: templates/disposable_notes/create_note.jinja2:106
+#: templates/disposable_notes/create_note.jinja2:137
+#: templates/disposable_notes/donate.jinja2:78
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -202,60 +204,64 @@ msgstr ""
 
 #: templates/disposable_notes/about_notes.jinja2:118
 msgid "articles heading"
-msgstr "Статьи"
+msgstr "Ссылки"
 
-#: templates/disposable_notes/about_notes.jinja2:122
+#: templates/disposable_notes/about_notes.jinja2:124
 msgid "article formatting link"
 msgstr "Как делается форматирование записки"
 
-#: templates/disposable_notes/about_notes.jinja2:126
+#: templates/disposable_notes/about_notes.jinja2:131
+msgid "source code link"
+msgstr "Исходный код сайта"
+
+#: templates/disposable_notes/about_notes.jinja2:135
 msgid "faq heading"
 msgstr "Ответы на часто задаваемые вопросы"
 
-#: templates/disposable_notes/about_notes.jinja2:130
-#: templates/disposable_notes/about_notes.jinja2:159
+#: templates/disposable_notes/about_notes.jinja2:139
+#: templates/disposable_notes/about_notes.jinja2:168
 msgid "faq can-admins-see-note-content heading "
 msgstr ""
 "Могут ли администраторы сайта или хостинг-провайдеры видеть содержимое "
 "записок?"
 
-#: templates/disposable_notes/about_notes.jinja2:135
-#: templates/disposable_notes/about_notes.jinja2:170
+#: templates/disposable_notes/about_notes.jinja2:144
+#: templates/disposable_notes/about_notes.jinja2:179
 msgid "faq sharing-decrypted-note-content heading"
 msgstr ""
 "Может ли сайт перехватить содержимое записки пока она находится в "
 "расшифрованном виде и передать его кому-то?"
 
-#: templates/disposable_notes/about_notes.jinja2:140
-#: templates/disposable_notes/about_notes.jinja2:177
+#: templates/disposable_notes/about_notes.jinja2:149
+#: templates/disposable_notes/about_notes.jinja2:186
 msgid "faq note-data heading"
 msgstr "Что вам известно о записке, кроме её содержания?"
 
-#: templates/disposable_notes/about_notes.jinja2:145
-#: templates/disposable_notes/about_notes.jinja2:202
+#: templates/disposable_notes/about_notes.jinja2:154
+#: templates/disposable_notes/about_notes.jinja2:211
 msgid "faq storing-ip heading"
 msgstr "Храните ли Вы ip-адреса посетителей?"
 
-#: templates/disposable_notes/about_notes.jinja2:150
-#: templates/disposable_notes/about_notes.jinja2:209
+#: templates/disposable_notes/about_notes.jinja2:159
+#: templates/disposable_notes/about_notes.jinja2:218
 msgid "faq stats heading"
 msgstr "Какую статистику Вы собираете?"
 
-#: templates/disposable_notes/about_notes.jinja2:155
-#: templates/disposable_notes/about_notes.jinja2:216
+#: templates/disposable_notes/about_notes.jinja2:164
+#: templates/disposable_notes/about_notes.jinja2:225
 msgid "faq ads heading"
 msgstr "Будет ли на этом сайте реклама? Как вообще вы зарабатываете на этом сайте?"
 
-#: templates/disposable_notes/about_notes.jinja2:161
-#: templates/disposable_notes/about_notes.jinja2:172
-#: templates/disposable_notes/about_notes.jinja2:179
-#: templates/disposable_notes/about_notes.jinja2:204
-#: templates/disposable_notes/about_notes.jinja2:211
-#: templates/disposable_notes/about_notes.jinja2:218
+#: templates/disposable_notes/about_notes.jinja2:170
+#: templates/disposable_notes/about_notes.jinja2:181
+#: templates/disposable_notes/about_notes.jinja2:188
+#: templates/disposable_notes/about_notes.jinja2:213
+#: templates/disposable_notes/about_notes.jinja2:220
+#: templates/disposable_notes/about_notes.jinja2:227
 msgid "copy link"
 msgstr "Скопировать ссылку"
 
-#: templates/disposable_notes/about_notes.jinja2:165
+#: templates/disposable_notes/about_notes.jinja2:174
 msgid "faq can-admins-see-note-content 1"
 msgstr ""
 "<p>        Нет, все записки хранятся в зашифрованном виде. Шифруется "
@@ -268,7 +274,7 @@ msgstr ""
 "часть ссылки называется якорем и обыкновенно используется браузером для "
 "навигации по        блокам на странице.    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:168
+#: templates/disposable_notes/about_notes.jinja2:177
 msgid "faq can-admins-see-note-content 2"
 msgstr ""
 "<p>        Таким образом, мы не обрабатываем никаких данных, содержащихся"
@@ -279,7 +285,7 @@ msgstr ""
 "посмотреть, как шифруются записки, и что именно отправляется на наш "
 "сервер.    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:176
+#: templates/disposable_notes/about_notes.jinja2:185
 msgid "faq sharing-decrypted-note-content"
 msgstr ""
 "<p>        Нет, сайт не передаёт никому расшифрованного содержимого "
@@ -292,7 +298,7 @@ msgstr ""
 "пользователей. Это наша положительная отличительная черта от        "
 "конкурентных сервисов.    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:183
+#: templates/disposable_notes/about_notes.jinja2:192
 msgid "faq note-data"
 msgstr ""
 "<p>        Когда Вы создаёте записку, мы не связываем с ней ни Вас, ни "
@@ -310,7 +316,7 @@ msgstr ""
 "прочитают до этого и счетчик (также необходимый для расшифровки)</i>. Вот"
 " так выглядит одна из тестовых записок в базе данных:    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:208
+#: templates/disposable_notes/about_notes.jinja2:217
 msgid "faq storing-ip"
 msgstr ""
 "<p>        Мы стараемся не собирать информацию о своих посетителях. "
@@ -326,7 +332,7 @@ msgstr ""
 "антиспам-системах для защиты от ботов и злоумышленников, которые иногда "
 "пытаются создавать        записки в неограниченных количествах.    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:215
+#: templates/disposable_notes/about_notes.jinja2:224
 msgid "faq stats"
 msgstr ""
 "<p>        У нас есть всего 2 счётчика: количество созданных записок и "
@@ -337,7 +343,7 @@ msgstr ""
 "Яндекс.Метрики. Причину этого мы рассказали <a href=\"#sharing-decrypted-"
 "note-content\">вот здесь</a>.    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:222
+#: templates/disposable_notes/about_notes.jinja2:231
 msgid "faq ads"
 msgstr ""
 "<p>        Этот сайт изначально был создан в личных целях. Мы используем "
@@ -353,13 +359,14 @@ msgstr ""
 "взгляд способ монетизации — это добровольные        пожертвования.</i>"
 "    </p>"
 
-#: templates/disposable_notes/about_notes.jinja2:225
-#: templates/disposable_notes/formatting.jinja2:329
+#: templates/disposable_notes/about_notes.jinja2:234
+#: templates/disposable_notes/formatting.jinja2:344
 msgid "did not get answer"
 msgstr "Не нашли ответ на свой вопрос?"
 
-#: templates/disposable_notes/about_notes.jinja2:226
-#: templates/disposable_notes/formatting.jinja2:330
+#: templates/disposable_notes/about_notes.jinja2:235
+#: templates/disposable_notes/donate.jinja2:275
+#: templates/disposable_notes/formatting.jinja2:345
 msgid "write us link"
 msgstr "Напишите нам!"
 
@@ -375,42 +382,32 @@ msgstr ""
 "безопасная передача данных, защита данных от третьих лиц, privacy, "
 "security, disposable notes"
 
-#: templates/disposable_notes/base.jinja2:109
+#: templates/disposable_notes/base.jinja2:103
 msgid "enable js heading"
 msgstr "Включите JavaScript!"
 
-#: templates/disposable_notes/base.jinja2:110
+#: templates/disposable_notes/base.jinja2:104
 msgid "enable js description"
 msgstr ""
 "Пользование этим сайтом без включенного JavaScript невозможно! Если Ваш "
 "браузер не поддерживает JavaScript или Вы не знаете, что это такое, "
 "установите последнюю версию Chrome или Firefox."
 
-#: templates/disposable_notes/base.jinja2:115
-msgid "war-banner-header"
-msgstr "Мы против военных действий!"
-
-#: templates/disposable_notes/base.jinja2:117
-msgid "war-banner-text"
-msgstr ""
-"Любая война или терроризм недопустимы. Сейчас мы делаем всё возможное, "
-"чтобы оставить возможность безопасного обмена сообщениями и файлами, так "
-"как считаем, что сохранение конфиденциальности сейчас очень важно."
-
-#: templates/disposable_notes/base.jinja2:150
+#: templates/disposable_notes/base.jinja2:134
 msgid "contacts"
 msgstr "Контакты"
 
-#: templates/disposable_notes/base.jinja2:151
-msgid "articles"
-msgstr "Статьи"
+#: templates/disposable_notes/base.jinja2:135
+#: templates/disposable_notes/create_note.jinja2:225
+msgid "donate"
+msgstr "Поддержать"
 
-#: templates/disposable_notes/base.jinja2:152
+#: templates/disposable_notes/base.jinja2:136
 msgid "FAQ"
 msgstr "FAQ"
 
-#: templates/disposable_notes/base.jinja2:153
-#: templates/disposable_notes/errors/construction.jinja2:11861
+#: templates/disposable_notes/base.jinja2:137
+#: templates/disposable_notes/errors/construction.jinja2:11859
 msgid "lang alt"
 msgstr "<a href='' onclick=\"change_lang('en')\">English</a>"
 
@@ -429,89 +426,133 @@ msgstr ""
 msgid "%(sitename)s"
 msgstr "%(sitename)s — одноразовые записки для безопасной передачи важных данных"
 
-#: templates/disposable_notes/create_note.jinja2:110
+#: templates/disposable_notes/create_note.jinja2:141
 msgid "create note h1 header"
 msgstr "Новая записка"
 
-#: templates/disposable_notes/create_note.jinja2:114
-#: templates/disposable_notes/view_note.jinja2:65
+#: templates/disposable_notes/create_note.jinja2:145
+#: templates/disposable_notes/view_note.jinja2:55
 msgid "ad banner header"
 msgstr "Создайте одноразовую записку, которая уничтожится после первого прочтения."
 
-#: templates/disposable_notes/create_note.jinja2:115
-#: templates/disposable_notes/view_note.jinja2:66
+#: templates/disposable_notes/create_note.jinja2:146
+#: templates/disposable_notes/view_note.jinja2:56
 msgid "ad banner description"
 msgstr ""
 "Передавайте важные данные в мессенджерах, используя ссылки на записки, "
 "чтобы третьи лица не смогли их узнать!"
 
-#: templates/disposable_notes/create_note.jinja2:117
-#: templates/disposable_notes/view_note.jinja2:67
+#: templates/disposable_notes/create_note.jinja2:148
+#: templates/disposable_notes/view_note.jinja2:58
 msgid "ad banner act link"
 msgstr "Подробнее..."
 
-#: templates/disposable_notes/create_note.jinja2:123
-#: templates/disposable_notes/view_note.jinja2:73
+#: templates/disposable_notes/create_note.jinja2:154
+#: templates/disposable_notes/view_note.jinja2:64
 msgid "ad banner do not show again"
 msgstr "Больше&nbsp;не&nbsp;показывать"
 
-#: templates/disposable_notes/create_note.jinja2:136
+#: templates/disposable_notes/create_note.jinja2:167
 msgid "note content placeholder"
 msgstr "Текст записки"
 
-#: templates/disposable_notes/create_note.jinja2:148
+#: templates/disposable_notes/create_note.jinja2:179
 msgid "advanced options"
 msgstr "Дополнительные&nbsp;параметры"
 
-#: templates/disposable_notes/create_note.jinja2:158
+#: templates/disposable_notes/create_note.jinja2:189
 msgid "also delete in"
 msgstr "В любом случае удалить записку через"
 
-#: templates/disposable_notes/create_note.jinja2:160
+#: templates/disposable_notes/create_note.jinja2:191
 msgid "7 days"
 msgstr "7 дней"
 
-#: templates/disposable_notes/create_note.jinja2:161
+#: templates/disposable_notes/create_note.jinja2:192
 msgid "2 days"
 msgstr "2 дня"
 
-#: templates/disposable_notes/create_note.jinja2:162
+#: templates/disposable_notes/create_note.jinja2:193
 msgid "1 day"
 msgstr "1 день"
 
-#: templates/disposable_notes/create_note.jinja2:163
+#: templates/disposable_notes/create_note.jinja2:194
 msgid "12 hours"
 msgstr "12 часов"
 
-#: templates/disposable_notes/create_note.jinja2:164
+#: templates/disposable_notes/create_note.jinja2:195
 msgid "2 hours"
 msgstr "2 часа"
 
-#: templates/disposable_notes/create_note.jinja2:165
+#: templates/disposable_notes/create_note.jinja2:196
 msgid "1 hour"
 msgstr "1 час"
 
-#: templates/disposable_notes/create_note.jinja2:166
+#: templates/disposable_notes/create_note.jinja2:197
 msgid "30 minutes"
 msgstr "30 минут"
 
-#: templates/disposable_notes/create_note.jinja2:167
+#: templates/disposable_notes/create_note.jinja2:198
 msgid "15 minutes"
 msgstr "15 минут"
 
-#: templates/disposable_notes/create_note.jinja2:168
+#: templates/disposable_notes/create_note.jinja2:199
 msgid "5 minutes"
 msgstr "5 минут"
 
-#: templates/disposable_notes/create_note.jinja2:171
+#: templates/disposable_notes/create_note.jinja2:202
 msgid "file input label"
 msgstr "Отправьте файл (вместо текста записки)"
 
-#: templates/disposable_notes/create_note.jinja2:179
+#: templates/disposable_notes/create_note.jinja2:210
 #: templates/disposable_notes/js/create_note.js:80
-#: templates/disposable_notes/js/create_note.js:111
+#: templates/disposable_notes/js/create_note.js:113
 msgid "create note btn"
 msgstr "Создать записку"
+
+#: templates/disposable_notes/create_note.jinja2:223
+msgid "donate banner header"
+msgstr "Поддержите наш проект!"
+
+#: templates/disposable_notes/create_note.jinja2:224
+msgid "donate banner description"
+msgstr ""
+"Пожертвование можно сделать переводом с российской карты или используя "
+"следующие криптовалюты: <i>Bitcoin, Ethereum, Tether, USDCoin, BNB, XRP, "
+"DAI, Binance USD, Dogecoin, Tron, Monero, Litecoin, SHIBA INU, "
+"Cardano</i>"
+
+#: templates/disposable_notes/donate.jinja2:3
+msgid "donate page title"
+msgstr "Поддержать"
+
+#: templates/disposable_notes/donate.jinja2:81
+msgid "donate heading"
+msgstr "Поддержать проект"
+
+#: templates/disposable_notes/donate.jinja2:82
+msgid "with bank card"
+msgstr "Банковской картой (только карты российских банков)"
+
+#: templates/disposable_notes/donate.jinja2:90
+msgid "payment amount"
+msgstr "Сумма перевода"
+
+#: templates/disposable_notes/donate.jinja2:95
+msgid "comment"
+msgstr "Комментарий"
+
+#: templates/disposable_notes/donate.jinja2:99
+msgid "transfer"
+msgstr "Перевести"
+
+#: templates/disposable_notes/donate.jinja2:101
+msgid "with crypto"
+msgstr "Криптовалютой"
+
+#: templates/disposable_notes/donate.jinja2:274
+msgid "other crypto"
+msgstr "Хотите сделать пожертвование в другой криптовалюте?"
 
 #: templates/disposable_notes/formatting.jinja2:3
 msgid "formatting description"
@@ -529,7 +570,7 @@ msgstr "Как это работает"
 
 #: templates/disposable_notes/formatting.jinja2:58
 msgid "formatting bc articles"
-msgstr "Статьи"
+msgstr "Ссылки"
 
 #: templates/disposable_notes/formatting.jinja2:62
 #: templates/disposable_notes/formatting.jinja2:66
@@ -547,92 +588,94 @@ msgstr ""
 "показывающая, какие теги за что отвечают."
 
 #: templates/disposable_notes/formatting.jinja2:77
-#: templates/disposable_notes/formatting.jinja2:83
+#: templates/disposable_notes/formatting.jinja2:84
 msgid "link"
 msgstr "Ссылка"
 
-#: templates/disposable_notes/formatting.jinja2:91
-#: templates/disposable_notes/formatting.jinja2:97
-#: templates/disposable_notes/formatting.jinja2:105
-#: templates/disposable_notes/formatting.jinja2:111
-#: templates/disposable_notes/formatting.jinja2:119
-#: templates/disposable_notes/formatting.jinja2:125
-#: templates/disposable_notes/formatting.jinja2:133
-#: templates/disposable_notes/formatting.jinja2:139
-#: templates/disposable_notes/formatting.jinja2:147
-#: templates/disposable_notes/formatting.jinja2:153
-#: templates/disposable_notes/formatting.jinja2:161
-#: templates/disposable_notes/formatting.jinja2:167
-#: templates/disposable_notes/formatting.jinja2:175
-#: templates/disposable_notes/formatting.jinja2:181
-#: templates/disposable_notes/formatting.jinja2:189
-#: templates/disposable_notes/formatting.jinja2:195
-#: templates/disposable_notes/formatting.jinja2:203
-#: templates/disposable_notes/formatting.jinja2:209
-#: templates/disposable_notes/formatting.jinja2:217
-#: templates/disposable_notes/formatting.jinja2:223
-#: templates/disposable_notes/formatting.jinja2:231
-#: templates/disposable_notes/formatting.jinja2:237
-#: templates/disposable_notes/formatting.jinja2:245
-#: templates/disposable_notes/formatting.jinja2:251
-#: templates/disposable_notes/formatting.jinja2:259
-#: templates/disposable_notes/formatting.jinja2:265
-#: templates/disposable_notes/formatting.jinja2:273
-#: templates/disposable_notes/formatting.jinja2:279
+#: templates/disposable_notes/formatting.jinja2:92
+#: templates/disposable_notes/formatting.jinja2:98
+#: templates/disposable_notes/formatting.jinja2:106
+#: templates/disposable_notes/formatting.jinja2:112
+#: templates/disposable_notes/formatting.jinja2:120
+#: templates/disposable_notes/formatting.jinja2:126
+#: templates/disposable_notes/formatting.jinja2:134
+#: templates/disposable_notes/formatting.jinja2:140
+#: templates/disposable_notes/formatting.jinja2:148
+#: templates/disposable_notes/formatting.jinja2:154
+#: templates/disposable_notes/formatting.jinja2:162
+#: templates/disposable_notes/formatting.jinja2:168
+#: templates/disposable_notes/formatting.jinja2:176
+#: templates/disposable_notes/formatting.jinja2:182
+#: templates/disposable_notes/formatting.jinja2:190
+#: templates/disposable_notes/formatting.jinja2:196
+#: templates/disposable_notes/formatting.jinja2:204
+#: templates/disposable_notes/formatting.jinja2:210
+#: templates/disposable_notes/formatting.jinja2:218
+#: templates/disposable_notes/formatting.jinja2:224
+#: templates/disposable_notes/formatting.jinja2:232
+#: templates/disposable_notes/formatting.jinja2:238
+#: templates/disposable_notes/formatting.jinja2:246
+#: templates/disposable_notes/formatting.jinja2:252
+#: templates/disposable_notes/formatting.jinja2:260
+#: templates/disposable_notes/formatting.jinja2:266
+#: templates/disposable_notes/formatting.jinja2:274
+#: templates/disposable_notes/formatting.jinja2:280
+#: templates/disposable_notes/formatting.jinja2:288
+#: templates/disposable_notes/formatting.jinja2:294
 msgid "text"
 msgstr "Текст"
 
-#: templates/disposable_notes/formatting.jinja2:303
+#: templates/disposable_notes/formatting.jinja2:318
 msgid "formatting new line"
 msgstr "Перевод на новую строку"
 
-#: templates/disposable_notes/formatting.jinja2:309
+#: templates/disposable_notes/formatting.jinja2:324
 msgid "formatting example heading"
 msgstr "Пример отформатированной записки"
 
-#: templates/disposable_notes/formatting.jinja2:310
+#: templates/disposable_notes/formatting.jinja2:325
 msgid "formatting text heading"
 msgstr "Текст записки при её написании:"
 
-#: templates/disposable_notes/formatting.jinja2:314
+#: templates/disposable_notes/formatting.jinja2:329
 msgid "formatting text 1"
 msgstr "<lp>Привет, <i>друг</i>!</p>"
 
-#: templates/disposable_notes/formatting.jinja2:315
+#: templates/disposable_notes/formatting.jinja2:330
 msgid "formatting text 2"
 msgstr ""
 "В этой записке хочу передать тебе <u>данные для подключения к "
 "<b>системе</b></u>.<br>"
 
-#: templates/disposable_notes/formatting.jinja2:316
+#: templates/disposable_notes/formatting.jinja2:331
 msgid "formatting text 3"
 msgstr "<h3>Данные для <gspan>входа</span>:</h3>"
 
-#: templates/disposable_notes/formatting.jinja2:317
+#: templates/disposable_notes/formatting.jinja2:332
 msgid "formatting text 4"
 msgstr "<lp><i>Login:</i> <ms>admin</ms></p>"
 
-#: templates/disposable_notes/formatting.jinja2:318
+#: templates/disposable_notes/formatting.jinja2:333
 msgid "formatting text 5"
 msgstr "<lp><i>Password:</i> <ms>jd74nf720kg</ms></p>"
 
-#: templates/disposable_notes/formatting.jinja2:319
+#: templates/disposable_notes/formatting.jinja2:334
 msgid "formatting text 6"
 msgstr ""
 "<hr><b>Пожалуйста, сохрани пароль в <rspan> надёжном месте</span>, прежде"
 " чем закрывать записку.</b>"
 
-#: templates/disposable_notes/formatting.jinja2:320
+#: templates/disposable_notes/formatting.jinja2:335
 msgid "formatting text 7"
 msgstr ""
 "Подключиться к системе можно <a href=\"https://private-"
 "net.work\">здесь</a>."
 
-#: templates/disposable_notes/formatting.jinja2:323
+#: templates/disposable_notes/formatting.jinja2:338
 msgid "formatting example content heading"
 msgstr "Содержимое записки при просмотре:"
 
-#: templates/disposable_notes/formatting.jinja2:325
+#: templates/disposable_notes/formatting.jinja2:340
 msgid "formatting example content"
 msgstr ""
 "<p style=\"text-align: left\">            Привет, <i>друг</i>!        "
@@ -695,28 +738,13 @@ msgstr ""
 msgid "view note btn"
 msgstr "Да, уверен (-а)"
 
-#: templates/disposable_notes/view_note.jinja2:56
-msgid "view note 404 header"
-msgstr "Эта записка уже была просмотрена"
-
-#: templates/disposable_notes/view_note.jinja2:57
-msgid "view note 404 description"
-msgstr ""
-"Если Вы не открывали записку ранее, значит истёк её срок хранения, "
-"указанный при создании, или её просмотрел третий человек, будьте "
-"внимательны!!! Если Вы не сохранили необходимые данные, попросите "
-"прислать их Вам снова."
-
 #: templates/disposable_notes/errors/basic_error.jinja2:56
-#: templates/disposable_notes/errors/construction.jinja2:11841
+#: templates/disposable_notes/errors/construction.jinja2:11839
 msgid "Ошибка"
 msgstr "Ошибка"
 
 #: templates/disposable_notes/errors/basic_error.jinja2:58
-#: templates/disposable_notes/errors/construction.jinja2:11843
+#: templates/disposable_notes/errors/construction.jinja2:11841
 msgid "Контакты администратора"
 msgstr "Контакты администратора"
-
-#~ msgid "formatting monospace"
-#~ msgstr "Выделяемый моноширинный текст"
 

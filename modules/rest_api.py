@@ -52,6 +52,7 @@ class NoteResource(Resource):
 class NotesResource(Resource):
     def post(self):
         session = db_session.create_session()
+
         parser = reqparse.RequestParser()
         parser.add_argument('content', required=True)
         parser.add_argument('counter', required=True)
@@ -59,31 +60,37 @@ class NotesResource(Resource):
         parser.add_argument('doc', required=True)
         parser.add_argument('ext', required=True)
         args = parser.parse_args()
+
         if "deletein" in args.keys():
             delta_min = int(args["deletein"]) if 0 < int(args["deletein"]) <= 10080 else 10080
         else:
             delta_min = 10080
+
         if len(args["counter"]) < 16 or len(args["counter"]) > 30:
             abort(400, message=f"Counter length {len(args['counter'])} is invalid!")
+
         delete_date = datetime.datetime.now() + datetime.timedelta(minutes=delta_min)
+
         note_id = "".join([choice(ascii_letters + digits) for _ in range(randint(9, 12))])
         while session.query(Note).get(note_id):
             note_id = "".join([choice(ascii_letters + digits) for _ in range(randint(9, 12))])
+
         if args['doc'] == "true":
-            print(len(args["content"]))
-            if len(args["content"]) > 8400000:
-                return abort(413, message=f"Content length {len(args['content'])} is invalid!")
-            doc = Doc(
-                id=note_id,
-                content=args['content'],
-                counter=args['counter'],
-                delete_date=delete_date,
-                filename=args['ext']
-            )
-            session.add(doc)
-            session.commit()
-            Stats.new_note(session)
-            return jsonify({'id': doc.id})
+            if len(args["content"]) < 8400000:
+                doc = Doc(
+                    id=note_id,
+                    content=args['content'],
+                    counter=args['counter'],
+                    delete_date=delete_date,
+                    filename=args['ext']
+                )
+                session.add(doc)
+                session.commit()
+
+                Stats.new_note(session)
+                return jsonify({'id': doc.id})
+            return abort(413, message=f"Content length {len(args['content'])} is invalid!")
+
         else:
             if 0 < len(args["content"]) <= 10000:
                 note = Note(
@@ -94,6 +101,7 @@ class NotesResource(Resource):
                 )
                 session.add(note)
                 session.commit()
+
                 Stats.new_note(session)
                 return jsonify({'id': note.id})
             return abort(413, message=f"Content length {len(args['content'])} is invalid!")

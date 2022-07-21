@@ -1,0 +1,277 @@
+{% extends "disposable_notes/base.jinja2" %}
+{% block title %}
+    <title>{{ _('donate page title') }} | {{ config["SITENAME"] }}</title>
+{% endblock %}
+{% block styles -%}
+    <style>
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #36bfff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #36bfff;
+        }
+
+        .name {
+            text-align: left;
+            color: black;
+        }
+
+        .wallet {
+            width: 100%;
+            text-align: left;
+            border-radius: 15px;
+            background-color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .address {
+            padding: 20px;
+            max-width: 65%;
+        }
+
+        .address p {
+            color: black;
+            margin: auto;
+            word-break: break-all;
+        }
+
+        .qr {
+            padding: 20px;
+        }
+
+        .qr img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        #yoosubmit {
+            margin-bottom: 40px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .alert {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    </style>
+{%- endblock %}
+{% block navlinks -%}
+    <a class="nav-link" href="{{ url_for("notes.create_note") }}">{{ _('nav create note') }}</a>
+    <a class="nav-link" href="{{ url_for("notes.about_notes") }}">{{ _('nav about') }}</a>
+{%- endblock %}
+{% block content -%}
+    <h1>{{ _('donate heading') }}</h1>
+    <h4>{{ _('with bank card') }}</h4>
+    <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+        <input type="hidden" name="receiver" value="4100116758820886">
+        <input type="hidden" name="label" value="Donate Private-Net.work">
+        <input type="hidden" name="quickpay-form" value="donate">
+        <input type="hidden" name="targets" value="Пожертвование Private-Net.work">
+        <div class="mb-3 text-left input-group">
+            <input type="text" class="form-control" name="sum" id="sum" data-type="number"
+                   placeholder="{{ _('payment amount') }}">
+            <span class="input-group-text">RUB</span>
+        </div>
+        <div class="mb-3 text-left">
+            <textarea class="form-control" name="comment" id="comment"
+                      placeholder="{{ _('comment') }}"></textarea>
+        </div>
+        <input type="hidden" name="successURL" value="{{ url_for('notes.donate') }}">
+        <input type="hidden" name="paymentType" value="AC">
+        <input type="submit" class="btn btn-light" id="yoosubmit" value="{{ _('transfer') }}">
+    </form>
+    <h4>{{ _('with crypto') }}</h4>
+    <div id="btc" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/btc.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Bitcoin, BTC</h4>
+            <p class="user-select-all">{{ btc }}</p>
+        </div>
+    </div>
+    <div id="eth" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Ethereum, ETH</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="usdt-trc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/trx.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Tether, USDT.TRC20</h4>
+            <p class="user-select-all">{{ trx }}</p>
+        </div>
+    </div>
+    <div id="usdt-erc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Tether, USDT.ERC20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="usdt-bep20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Tether, USDT.BEP20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="usdc-trc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/trx.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">USDCoin, USDC.TRC20</h4>
+            <p class="user-select-all">{{ trx }}</p>
+        </div>
+    </div>
+    <div id="usdc-erc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">USDCoin, USDC.ERC20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="usdc-bep20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">USDCoin, USDC.BEP20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="bnb" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/bnb.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">BNB</h4>
+            <p class="user-select-all">{{ bnb }}</p>
+        </div>
+    </div>
+    <div id="xrp" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/xrp.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">XRP</h4>
+            <p class="user-select-all">{{ xrp }}</p>
+        </div>
+    </div>
+    <div id="busd-erc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Binance USD, BUSD.ERC20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="doge" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/doge.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Dogecoin, DOGE</h4>
+            <p class="user-select-all">{{ doge }}</p>
+        </div>
+    </div>
+    <div id="dai-erc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">DAI.ERC20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="dai-bep20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">DAI.BEP20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="trx" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/trx.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Tron, TRX</h4>
+            <p class="user-select-all">{{ trx }}</p>
+        </div>
+    </div>
+    <div id="xmr" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/xmr.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Monero, XMR</h4>
+            <p class="user-select-all">{{ xmr }}</p>
+        </div>
+    </div>
+    <div id="shib-erc20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">SHIBA INU, SHIB.ERC20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="ltc" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/ltc.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Litecoin, LTC</h4>
+            <p class="user-select-all">{{ ltc }}</p>
+        </div>
+    </div>
+    <div id="ada-bep20" class="wallet d-flex flex-wrap">
+        <div class="qr">
+            <img src="{{ url_for('static', filename='svg/wallets/eth.svg') }}" alt="QR">
+        </div>
+        <div class="address">
+            <h4 class="name">Cardano, ADA.BEP20</h4>
+            <p class="user-select-all">{{ eth }}</p>
+        </div>
+    </div>
+    <div id="extra-crypto" class="alert">
+        <h3>{{ _('other crypto') }}
+            <a href="{{ url_for('notes.support') }}">{{ _('write us link') }}</a></h3>
+    </div>
+{%- endblock %}
