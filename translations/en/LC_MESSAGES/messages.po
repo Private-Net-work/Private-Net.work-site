@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 20:46+0300\n"
+"POT-Creation-Date: 2022-07-21 21:12+0300\n"
 "PO-Revision-Date: 2022-01-13 19:27+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: en\n"
@@ -158,7 +158,7 @@ msgstr "How it works"
 
 #: templates/disposable_notes/about_notes.jinja2:112
 #: templates/disposable_notes/create_note.jinja2:134
-#: templates/disposable_notes/donate.jinja2:60
+#: templates/disposable_notes/donate.jinja2:77
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -168,7 +168,7 @@ msgstr "Create note"
 
 #: templates/disposable_notes/about_notes.jinja2:113
 #: templates/disposable_notes/create_note.jinja2:137
-#: templates/disposable_notes/donate.jinja2:61
+#: templates/disposable_notes/donate.jinja2:78
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -343,6 +343,7 @@ msgid "did not get answer"
 msgstr "Haven't found the answer?"
 
 #: templates/disposable_notes/about_notes.jinja2:235
+#: templates/disposable_notes/donate.jinja2:275
 #: templates/disposable_notes/formatting.jinja2:345
 msgid "write us link"
 msgstr "Write us!"
@@ -502,29 +503,33 @@ msgstr ""
 msgid "donate page title"
 msgstr "Donate"
 
-#: templates/disposable_notes/donate.jinja2:64
+#: templates/disposable_notes/donate.jinja2:81
 msgid "donate heading"
 msgstr "Donate"
 
-#: templates/disposable_notes/donate.jinja2:65
+#: templates/disposable_notes/donate.jinja2:82
 msgid "with bank card"
 msgstr "With bank card (RUSSIAN CARDS ONLY!)"
 
-#: templates/disposable_notes/donate.jinja2:73
+#: templates/disposable_notes/donate.jinja2:90
 msgid "payment amount"
 msgstr "Payment amount"
 
-#: templates/disposable_notes/donate.jinja2:78
+#: templates/disposable_notes/donate.jinja2:95
 msgid "comment"
 msgstr "Comment"
 
-#: templates/disposable_notes/donate.jinja2:82
+#: templates/disposable_notes/donate.jinja2:99
 msgid "transfer"
 msgstr "Pay"
 
-#: templates/disposable_notes/donate.jinja2:84
+#: templates/disposable_notes/donate.jinja2:101
 msgid "with crypto"
 msgstr "With cryptocurrency"
+
+#: templates/disposable_notes/donate.jinja2:274
+msgid "other crypto"
+msgstr "Want to donate in other cryptocurrency?"
 
 #: templates/disposable_notes/formatting.jinja2:3
 msgid "formatting description"

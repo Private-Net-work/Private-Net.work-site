@@ -9,6 +9,16 @@
             margin-bottom: 30px;
         }
 
+        a {
+            text-decoration: none;
+            color: #36bfff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #36bfff;
+        }
+
         .name {
             text-align: left;
             color: black;
@@ -54,6 +64,13 @@
         form {
             margin-top: 20px;
         }
+
+        .alert {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
     </style>
 {%- endblock %}
 {% block navlinks -%}
@@ -70,7 +87,7 @@
         <input type="hidden" name="targets" value="Пожертвование Private-Net.work">
         <div class="mb-3 text-left input-group">
             <input type="text" class="form-control" name="sum" id="sum" data-type="number"
-            placeholder="{{ _('payment amount') }}">
+                   placeholder="{{ _('payment amount') }}">
             <span class="input-group-text">RUB</span>
         </div>
         <div class="mb-3 text-left">
@@ -252,5 +269,9 @@
             <h4 class="name">Cardano, ADA.BEP20</h4>
             <p class="user-select-all">{{ eth }}</p>
         </div>
+    </div>
+    <div id="extra-crypto" class="alert">
+        <h3>{{ _('other crypto') }}
+            <a href="{{ url_for('notes.support') }}">{{ _('write us link') }}</a></h3>
     </div>
 {%- endblock %}
