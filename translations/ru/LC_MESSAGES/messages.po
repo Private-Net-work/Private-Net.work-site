@@ -517,7 +517,7 @@ msgstr "Поддержите наш проект!"
 msgid "donate banner description"
 msgstr ""
 "Пожертвование можно сделать при помощи следующих криптовалют: "
-"<i>Bitcoin, Ethereum, Tether, USDCoin, BNB, XRP, DAI,"
+"<i>Bitcoin, Ethereum, Tether, USDCoin, BNB, XRP, DAI, "
 "Binance USD, Dogecoin, Tron, Monero, Litecoin, SHIBA INU, Cardano</i>"
 
 #: templates/disposable_notes/donate.jinja2:3

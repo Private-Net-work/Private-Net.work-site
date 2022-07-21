@@ -97,6 +97,26 @@
             color: black;
         }
 
+        #donate-icon {
+            margin: auto;
+            padding: 10px;
+        }
+
+        #donate-icon-background {
+            background-color: #ffdd00;
+            border-radius: 38px;
+            width: 75px;
+            height: 75px;
+        }
+
+        #donate-icon-background img {
+            margin-top: 12px;
+        }
+
+        #donate-banner-content {
+            min-width: 450px;
+        }
+
         .donate-btn:hover {
             background: none;
             color: white;
@@ -186,10 +206,18 @@
             </div>
         </form>
     </div>
-    <div id="donate-banner" class="alert" style="display: none;">
-        <h3>{{ _('donate banner header') }}</h3>
-        <p> {{ _('donate banner description') }}</p>
-        <a href="{{ url_for('notes.donate') }}" class="btn btn-light donate-btn">{{ _('donate') }}</a>
+    <div id="donate-banner" class="alert row" style="display: none;">
+        <div id="donate-icon" class="col-2">
+            <div id="donate-icon-background">
+                <img width="50px" height="50px" src="{{ url_for('static', filename='img/donate-icon.png') }}"
+                     alt="Donate">
+            </div>
+        </div>
+        <div id="donate-banner-content" class="col">
+            <h3>{{ _('donate banner header') }}</h3>
+            <p> {{ _('donate banner description') }}</p>
+            <a href="{{ url_for('notes.donate') }}" class="btn btn-light donate-btn">{{ _('donate') }}</a>
+        </div>
     </div>
 {% endblock %}
 {% block endscripts -%}
