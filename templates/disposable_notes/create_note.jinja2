@@ -113,8 +113,14 @@
             margin-top: 12px;
         }
 
-        #donate-banner-content {
-            min-width: 450px;
+        @media (max-width: 768px) {
+            #donate-icon {
+                width: 100%;
+            }
+
+            #donate-icon-background {
+                margin: auto;
+            }
         }
 
         .donate-btn:hover {
