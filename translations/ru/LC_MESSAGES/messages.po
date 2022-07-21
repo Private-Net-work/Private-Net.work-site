@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 20:36+0300\n"
+"POT-Creation-Date: 2022-07-21 20:46+0300\n"
 "PO-Revision-Date: 2022-01-13 19:26+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: ru\n"
@@ -516,14 +516,14 @@ msgstr "Поддержите наш проект!"
 #: templates/disposable_notes/create_note.jinja2:224
 msgid "donate banner description"
 msgstr ""
-"Пожертвование можно сделать при помощи следующих криптовалют: <i>Bitcoin,"
-" Ethereum, Tether, USDCoin, BNB, XRP, DAI, Binance USD, Dogecoin, Tron, "
-"Monero, Litecoin, SHIBA INU, Cardano</i>"
+"Пожертвование можно сделать переводом с российской карты или используя "
+"следующие криптовалюты: <i>Bitcoin, Ethereum, Tether, USDCoin, BNB, XRP, "
+"DAI, Binance USD, Dogecoin, Tron, Monero, Litecoin, SHIBA INU, "
+"Cardano</i>"
 
 #: templates/disposable_notes/donate.jinja2:3
-#: templates/disposable_notes/support.jinja2:3
-msgid "support page title"
-msgstr "Контакты"
+msgid "donate page title"
+msgstr "Поддержать"
 
 #: templates/disposable_notes/donate.jinja2:64
 msgid "donate heading"
@@ -685,6 +685,10 @@ msgstr ""
 "red\">надёжном месте</span>, прежде чем закрывать            записку.</b>"
 "        <br>        Подключиться к системе можно <a href=\"https"
 "://private-net.work\">здесь</a>."
+
+#: templates/disposable_notes/support.jinja2:3
+msgid "support page title"
+msgstr "Контакты"
 
 #: templates/disposable_notes/support.jinja2:48
 msgid "support heading"

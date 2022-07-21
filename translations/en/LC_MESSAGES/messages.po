@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 20:36+0300\n"
+"POT-Creation-Date: 2022-07-21 20:46+0300\n"
 "PO-Revision-Date: 2022-01-13 19:27+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: en\n"
@@ -496,12 +496,11 @@ msgid "donate banner description"
 msgstr ""
 "You can donate with these cryptocurrencies: <i>Bitcoin, Ethereum, Tether,"
 " USDCoin, BNB, XRP, DAI, Binance USD, Dogecoin, Tron, Monero, Litecoin, "
-"SHIBA INU, Cardano</i>"
+"SHIBA INU, Cardano</i>. <br>Russian <i>bank cards</i> are also accepted."
 
 #: templates/disposable_notes/donate.jinja2:3
-#: templates/disposable_notes/support.jinja2:3
-msgid "support page title"
-msgstr "Contacts"
+msgid "donate page title"
+msgstr "Donate"
 
 #: templates/disposable_notes/donate.jinja2:64
 msgid "donate heading"
@@ -659,6 +658,10 @@ msgstr ""
 "color: black\"><b>Please, save this password in a <span style=\"color: "
 "red\">safe place</span>, before closing this note.</b><br>You can connect"
 " to the system <a href=\"https://private-net.work\">here</a>."
+
+#: templates/disposable_notes/support.jinja2:3
+msgid "support page title"
+msgstr "Contacts"
 
 #: templates/disposable_notes/support.jinja2:48
 msgid "support heading"
