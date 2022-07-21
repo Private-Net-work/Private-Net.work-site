@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 00:42+0300\n"
+"POT-Creation-Date: 2022-07-21 20:36+0300\n"
 "PO-Revision-Date: 2022-01-13 19:26+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: ru\n"
@@ -163,8 +163,8 @@ msgid "about title"
 msgstr "Как это работает"
 
 #: templates/disposable_notes/about_notes.jinja2:112
-#: templates/disposable_notes/create_note.jinja2:108
-#: templates/disposable_notes/donate.jinja2:48
+#: templates/disposable_notes/create_note.jinja2:134
+#: templates/disposable_notes/donate.jinja2:60
 #: templates/disposable_notes/errors/basic_error.jinja2:51
 #: templates/disposable_notes/formatting.jinja2:45
 #: templates/disposable_notes/support.jinja2:44
@@ -173,8 +173,8 @@ msgid "nav create note"
 msgstr "Новая записка"
 
 #: templates/disposable_notes/about_notes.jinja2:113
-#: templates/disposable_notes/create_note.jinja2:111
-#: templates/disposable_notes/donate.jinja2:49
+#: templates/disposable_notes/create_note.jinja2:137
+#: templates/disposable_notes/donate.jinja2:61
 #: templates/disposable_notes/errors/basic_error.jinja2:52
 #: templates/disposable_notes/formatting.jinja2:46
 #: templates/disposable_notes/support.jinja2:45
@@ -397,7 +397,7 @@ msgid "contacts"
 msgstr "Контакты"
 
 #: templates/disposable_notes/base.jinja2:135
-#: templates/disposable_notes/create_note.jinja2:195
+#: templates/disposable_notes/create_note.jinja2:225
 msgid "donate"
 msgstr "Поддержать"
 
@@ -425,109 +425,129 @@ msgstr ""
 msgid "%(sitename)s"
 msgstr "%(sitename)s — одноразовые записки для безопасной передачи важных данных"
 
-#: templates/disposable_notes/create_note.jinja2:115
+#: templates/disposable_notes/create_note.jinja2:141
 msgid "create note h1 header"
 msgstr "Новая записка"
 
-#: templates/disposable_notes/create_note.jinja2:119
+#: templates/disposable_notes/create_note.jinja2:145
 #: templates/disposable_notes/view_note.jinja2:55
 msgid "ad banner header"
 msgstr "Создайте одноразовую записку, которая уничтожится после первого прочтения."
 
-#: templates/disposable_notes/create_note.jinja2:120
+#: templates/disposable_notes/create_note.jinja2:146
 #: templates/disposable_notes/view_note.jinja2:56
 msgid "ad banner description"
 msgstr ""
 "Передавайте важные данные в мессенджерах, используя ссылки на записки, "
 "чтобы третьи лица не смогли их узнать!"
 
-#: templates/disposable_notes/create_note.jinja2:122
+#: templates/disposable_notes/create_note.jinja2:148
 #: templates/disposable_notes/view_note.jinja2:58
 msgid "ad banner act link"
 msgstr "Подробнее..."
 
-#: templates/disposable_notes/create_note.jinja2:128
+#: templates/disposable_notes/create_note.jinja2:154
 #: templates/disposable_notes/view_note.jinja2:64
 msgid "ad banner do not show again"
 msgstr "Больше&nbsp;не&nbsp;показывать"
 
-#: templates/disposable_notes/create_note.jinja2:141
+#: templates/disposable_notes/create_note.jinja2:167
 msgid "note content placeholder"
 msgstr "Текст записки"
 
-#: templates/disposable_notes/create_note.jinja2:153
+#: templates/disposable_notes/create_note.jinja2:179
 msgid "advanced options"
 msgstr "Дополнительные&nbsp;параметры"
 
-#: templates/disposable_notes/create_note.jinja2:163
+#: templates/disposable_notes/create_note.jinja2:189
 msgid "also delete in"
 msgstr "В любом случае удалить записку через"
 
-#: templates/disposable_notes/create_note.jinja2:165
+#: templates/disposable_notes/create_note.jinja2:191
 msgid "7 days"
 msgstr "7 дней"
 
-#: templates/disposable_notes/create_note.jinja2:166
+#: templates/disposable_notes/create_note.jinja2:192
 msgid "2 days"
 msgstr "2 дня"
 
-#: templates/disposable_notes/create_note.jinja2:167
+#: templates/disposable_notes/create_note.jinja2:193
 msgid "1 day"
 msgstr "1 день"
 
-#: templates/disposable_notes/create_note.jinja2:168
+#: templates/disposable_notes/create_note.jinja2:194
 msgid "12 hours"
 msgstr "12 часов"
 
-#: templates/disposable_notes/create_note.jinja2:169
+#: templates/disposable_notes/create_note.jinja2:195
 msgid "2 hours"
 msgstr "2 часа"
 
-#: templates/disposable_notes/create_note.jinja2:170
+#: templates/disposable_notes/create_note.jinja2:196
 msgid "1 hour"
 msgstr "1 час"
 
-#: templates/disposable_notes/create_note.jinja2:171
+#: templates/disposable_notes/create_note.jinja2:197
 msgid "30 minutes"
 msgstr "30 минут"
 
-#: templates/disposable_notes/create_note.jinja2:172
+#: templates/disposable_notes/create_note.jinja2:198
 msgid "15 minutes"
 msgstr "15 минут"
 
-#: templates/disposable_notes/create_note.jinja2:173
+#: templates/disposable_notes/create_note.jinja2:199
 msgid "5 minutes"
 msgstr "5 минут"
 
-#: templates/disposable_notes/create_note.jinja2:176
+#: templates/disposable_notes/create_note.jinja2:202
 msgid "file input label"
 msgstr "Отправьте файл (вместо текста записки)"
 
-#: templates/disposable_notes/create_note.jinja2:184
+#: templates/disposable_notes/create_note.jinja2:210
 #: templates/disposable_notes/js/create_note.js:80
 #: templates/disposable_notes/js/create_note.js:113
 msgid "create note btn"
 msgstr "Создать записку"
 
-#: templates/disposable_notes/create_note.jinja2:190
+#: templates/disposable_notes/create_note.jinja2:223
 msgid "donate banner header"
 msgstr "Поддержите наш проект!"
 
-#: templates/disposable_notes/create_note.jinja2:191
+#: templates/disposable_notes/create_note.jinja2:224
 msgid "donate banner description"
 msgstr ""
-"Пожертвование можно сделать при помощи следующих криптовалют: "
-"<i>Bitcoin, Ethereum, Tether, USDCoin, BNB, XRP, DAI, "
-"Binance USD, Dogecoin, Tron, Monero, Litecoin, SHIBA INU, Cardano</i>"
+"Пожертвование можно сделать при помощи следующих криптовалют: <i>Bitcoin,"
+" Ethereum, Tether, USDCoin, BNB, XRP, DAI, Binance USD, Dogecoin, Tron, "
+"Monero, Litecoin, SHIBA INU, Cardano</i>"
 
 #: templates/disposable_notes/donate.jinja2:3
 #: templates/disposable_notes/support.jinja2:3
 msgid "support page title"
 msgstr "Контакты"
 
-#: templates/disposable_notes/donate.jinja2:52
+#: templates/disposable_notes/donate.jinja2:64
 msgid "donate heading"
 msgstr "Поддержать проект"
+
+#: templates/disposable_notes/donate.jinja2:65
+msgid "with bank card"
+msgstr "Банковской картой (только карты российских банков)"
+
+#: templates/disposable_notes/donate.jinja2:73
+msgid "payment amount"
+msgstr "Сумма перевода"
+
+#: templates/disposable_notes/donate.jinja2:78
+msgid "comment"
+msgstr "Комментарий"
+
+#: templates/disposable_notes/donate.jinja2:82
+msgid "transfer"
+msgstr "Перевести"
+
+#: templates/disposable_notes/donate.jinja2:84
+msgid "with crypto"
+msgstr "Криптовалютой"
 
 #: templates/disposable_notes/formatting.jinja2:3
 msgid "formatting description"

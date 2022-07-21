@@ -42,6 +42,18 @@
             width: 150px;
             height: 150px;
         }
+
+        .text-left {
+            text-align: left;
+        }
+
+        #yoosubmit {
+            margin-bottom: 40px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
     </style>
 {%- endblock %}
 {% block navlinks -%}
@@ -50,6 +62,26 @@
 {%- endblock %}
 {% block content -%}
     <h1>{{ _('donate heading') }}</h1>
+    <h4>{{ _('with bank card') }}</h4>
+    <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+        <input type="hidden" name="receiver" value="4100116758820886">
+        <input type="hidden" name="label" value="Donate Private-Net.work">
+        <input type="hidden" name="quickpay-form" value="donate">
+        <input type="hidden" name="targets" value="Пожертвование Private-Net.work">
+        <div class="mb-3 text-left input-group">
+            <input type="text" class="form-control" name="sum" id="sum" data-type="number"
+            placeholder="{{ _('payment amount') }}">
+            <span class="input-group-text">RUB</span>
+        </div>
+        <div class="mb-3 text-left">
+            <textarea class="form-control" name="comment" id="comment"
+                      placeholder="{{ _('comment') }}"></textarea>
+        </div>
+        <input type="hidden" name="successURL" value="{{ url_for('notes.donate') }}">
+        <input type="hidden" name="paymentType" value="AC">
+        <input type="submit" class="btn btn-light" id="yoosubmit" value="{{ _('transfer') }}">
+    </form>
+    <h4>{{ _('with crypto') }}</h4>
     <div id="btc" class="wallet d-flex flex-wrap">
         <div class="qr">
             <img src="{{ url_for('static', filename='svg/wallets/btc.svg') }}" alt="QR">
