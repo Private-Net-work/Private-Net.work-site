@@ -33,8 +33,7 @@ def auth():
                                 max_age=3600 * 24 * 365 * 100, secure=True)
             return response
         return "Wrong password!"
-    else:
-        return "<form method='post'>" \
-               "<input type='password' name='password' placeholder='password'\\>" \
-               "<button type='submit'>Log in</button>" \
-               "</form>"
+    return "<form method='post'>" \
+           "<input type='password' name='password' placeholder='password'\\>" \
+           "<button type='submit'>Log in</button>" \
+           "</form>"

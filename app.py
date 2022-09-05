@@ -1,10 +1,11 @@
 """
 Main project module, Flask application
 """
+from os import getcwd
+
 from flask import Flask, request
 from flask_babel import Babel
 from flask_restful import Api
-from os import getcwd
 
 from blueprints.auth import auth_bp
 from blueprints.errorhandling import bad_request, forbidden, not_found, method_not_allowed, internal_server_error

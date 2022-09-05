@@ -1,6 +1,7 @@
 """
 Stats pages for admin
 """
+# pylint disable=invalid-name
 from flask import Blueprint, abort
 
 from blueprints.auth import is_admin
@@ -32,7 +33,7 @@ def stats():
         </table>
         """
     abort(403)
-    return
+    return ""
 
 
 @stats_bp.route("/construction/on")
@@ -48,6 +49,7 @@ def enable_construction_mode():
         s.commit()
         return "ON!"
     abort(403)
+    return ""
 
 
 @stats_bp.route("/construction/off")
@@ -63,3 +65,4 @@ def disable_construction_mode():
         s.commit()
         return "OFF!"
     abort(403)
+    return ""

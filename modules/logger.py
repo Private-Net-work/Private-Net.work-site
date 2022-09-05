@@ -1,7 +1,7 @@
 """
 Logging module
 """
-# pylint: disable=invalid-name, unused-argument
+# pylint: disable=invalid-name, unused-argument, inconsistent-return-statements
 import datetime
 import hashlib
 import logging
@@ -79,7 +79,6 @@ def before_request():
             return render_template('disposable_notes/errors/construction.jinja2',
                                    code=code, title=title, message=description,
                                    year=datetime.datetime.now().year), code
-    return
 
 
 def after_request(response):
