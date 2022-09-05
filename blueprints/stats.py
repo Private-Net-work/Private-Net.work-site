@@ -1,3 +1,6 @@
+"""
+Stats pages for admin
+"""
 from flask import Blueprint, abort
 
 from blueprints.auth import is_admin
@@ -9,6 +12,10 @@ stats_bp = Blueprint("stats", "stats")
 
 @stats_bp.route("/stats")
 def stats():
+    """Stats endpoint
+
+    :return: rendered stats page
+    """
     if is_admin():
         s = db_session.create_session()
         created = s.query(Stats).filter(Stats.name == "created").first().value
@@ -24,12 +31,16 @@ def stats():
         <tr><td>my viewed</td><td>{myviewed}</td>
         </table>
         """
-    else:
-        abort(403)
+    abort(403)
+    return
 
 
 @stats_bp.route("/construction/on")
 def enable_construction_mode():
+    """Enabling construction mode endpoint
+
+    :return: response with confirmation word
+    """
     if is_admin():
         s = db_session.create_session()
         construction_mode = s.query(Stats).filter(Stats.name == "construction").first()
@@ -41,6 +52,10 @@ def enable_construction_mode():
 
 @stats_bp.route("/construction/off")
 def disable_construction_mode():
+    """Disabling construction mode endpoint
+
+    :return: response with confirmation word
+    """
     if is_admin():
         s = db_session.create_session()
         construction_mode = s.query(Stats).filter(Stats.name == "construction").first()

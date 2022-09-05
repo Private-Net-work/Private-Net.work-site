@@ -1,3 +1,6 @@
+"""
+Admin authentication
+"""
 import hashlib
 from secrets import compare_digest
 
@@ -7,12 +10,20 @@ auth_bp = Blueprint("auth", "auth")
 
 
 def is_admin():
+    """
+    Checking if the visitor is the administrator of the site
+    :return: true if admin, else false
+    """
     return False if not request.cookies.get("auth") else \
         compare_digest(request.cookies.get("auth"), current_app.config["AUTH_COOKIE"])
 
 
 @auth_bp.route("/auth", methods=["GET", "POST"])
 def auth():
+    """
+    Authentication page for admin
+    :return: rendered authentication page
+    """
     if request.method == "POST":
         password = request.form["password"]
         if compare_digest(hashlib.sha512(bytes(password, encoding='utf-8')).digest().hex(),
@@ -21,8 +32,7 @@ def auth():
             response.set_cookie("auth", current_app.config["AUTH_COOKIE"],
                                 max_age=3600 * 24 * 365 * 100, secure=True)
             return response
-        else:
-            return "Wrong password!"
+        return "Wrong password!"
     else:
         return "<form method='post'>" \
                "<input type='password' name='password' placeholder='password'\\>" \

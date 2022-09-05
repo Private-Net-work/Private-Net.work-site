@@ -1,7 +1,14 @@
+"""
+Configuration module
+"""
+# pylint: disable=too-few-public-methods
 import os
 
 
-class Config(object):
+class Config:
+    """
+    Parent config class
+    """
     SITENAME = "Private-Net.work"
     SERVICE_NAME = "Notes"
     PROD_DOMAIN = "private-net.work"
@@ -27,8 +34,14 @@ class Config(object):
 
 
 class ProductionConfig(Config):
+    """
+    Production config class
+    """
     DOMAIN = "https://private-net.work"
 
 
 class DevelopmentConfig(Config):
+    """
+    Development config class
+    """
     DOMAIN = "http://localhost:5000"

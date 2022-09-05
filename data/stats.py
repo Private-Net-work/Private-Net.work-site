@@ -1,3 +1,7 @@
+"""
+Stats model
+"""
+# pylint: disable=invalid-name
 import sqlalchemy
 
 from blueprints.auth import is_admin
@@ -6,6 +10,9 @@ from .db_session import SqlAlchemyBase
 
 
 class Stats(SqlAlchemyBase):
+    """
+    Stats data model
+    """
     __tablename__ = 'stats'
 
     name = sqlalchemy.Column(sqlalchemy.String, primary_key=True)
@@ -13,6 +20,9 @@ class Stats(SqlAlchemyBase):
 
     @staticmethod
     def create_fields():
+        """
+        Create fields for stats model
+        """
         s = create_session()
         fields = ["created", "viewed", "mycreated", "myviewed", "construction"]
         for field in fields:
@@ -23,6 +33,10 @@ class Stats(SqlAlchemyBase):
 
     @staticmethod
     def new_note(session):
+        """New note stats event
+
+        :param session: DB session object
+        """
         if is_admin():
             mycreated = session.query(Stats).filter(Stats.name == "mycreated").first()
             mycreated.value += 1
@@ -33,6 +47,10 @@ class Stats(SqlAlchemyBase):
 
     @staticmethod
     def view_note(session):
+        """View note stats event
+
+        :param session: DB session object
+        """
         if is_admin():
             myviewed = session.query(Stats).filter(Stats.name == "myviewed").first()
             myviewed.value += 1

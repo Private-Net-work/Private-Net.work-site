@@ -1,3 +1,7 @@
+"""
+Logging module
+"""
+# pylint: disable=invalid-name, unused-argument
 import datetime
 import hashlib
 import logging
@@ -18,15 +22,24 @@ from data.stats import Stats
 
 
 class TgHandler(logging.StreamHandler):
+    """
+    Telegram handler. Sends logging records to Telegram
+    """
     on_same_line = False
 
     def emit(self, record):
+        """Sends logging records to admin via Telegram
+
+        :param record: Logging record
+        """
         msg = record.message
         if "Traceback" in msg:
             msg = msg.replace("Error: ", "Error: <b>") + "</b>"
         else:
             msg = f"<b>{msg}</b>"
-        res = requests.get(f'https://api.telegram.org/bot{current_app.config["TG_LOGGER_TOKEN"]}/sendMessage',
+        res = requests.get(f'https://api.telegram.org'
+                           f'/bot{current_app.config["TG_LOGGER_TOKEN"]}'
+                           f'/sendMessage', timeout=10,
                            params={"chat_id": Config.TG_ADMIN_ID,
                                    "text": msg,
                                    "parse_mode": "HTML"})
@@ -41,7 +54,9 @@ tg_handler.setFormatter(logging.Formatter(
     '%(levelname)s %(asctime)s: %(message)s'
 ))
 
-file_handler = TimedRotatingFileHandler("./logs/main.log", when="midnight", interval=1, backupCount=7)
+file_handler = TimedRotatingFileHandler("./logs/main.log",
+                                        when="midnight",
+                                        interval=1, backupCount=7)
 file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(logging.Formatter(
     '%(levelname)s %(asctime)s: %(message)s'
@@ -49,6 +64,10 @@ file_handler.setFormatter(logging.Formatter(
 
 
 def before_request():
+    """Before request handler. Checks if construction mode is on.
+
+    :return: construction page if construction mode is on
+    """
     s = create_session()
     construction_mode = s.query(Stats).filter(Stats.name == "construction").first()
     if construction_mode.value == 1:
@@ -60,9 +79,15 @@ def before_request():
             return render_template('disposable_notes/errors/construction.jinja2',
                                    code=code, title=title, message=description,
                                    year=datetime.datetime.now().year), code
+    return
 
 
 def after_request(response):
+    """After request handler. Logs visits without naming IP address
+
+    :param response: Flask response object
+    :return: response object
+    """
     ip = request.headers.get("Cf-Connecting-Ip", None)
     ip_hash = hashlib.sha512(ip.encode()).hexdigest()[:15] if ip else "NoIp"
     path = request.full_path[:-1] if request.full_path[-1] == "?" else request.full_path
@@ -73,27 +98,32 @@ def after_request(response):
     if ip_hash == "NoIp":
         ip_hash = request.remote_addr
     if path.startswith("/static"):
-        logger.debug('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
-                     request.scheme,
+        logger.debug('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+                     country, request.method, request.scheme,
                      request.host, path, response.status, referer, modified)
     else:
         if status_type == 5:
-            logger.error('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
-                         request.scheme,
+            logger.error('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+                         country, request.method, request.scheme,
                          request.host, path, response.status, referer, modified)
         elif status_type == 4:
-            logger.warning('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
-                           request.scheme,
+            logger.warning('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+                           country, request.method, request.scheme,
                            request.host, path, response.status, referer, modified)
         else:
-            logger.info('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
-                        request.scheme,
+            logger.info('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+                        country, request.method, request.scheme,
                         request.host, path, response.status, referer, modified)
 
     return response
 
 
 def exceptions(e):
+    """Exceptions handler
+
+    :param e: exception object
+    :return: rendered error page
+    """
     tb = traceback.format_exc()
     logger.error('\n%s', tb[:-1])
     title = gettext("Internal server error")

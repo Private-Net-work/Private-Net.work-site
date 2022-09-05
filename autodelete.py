@@ -1,3 +1,6 @@
+"""
+A service of deleting expired unread notes. Must be a crontab job
+"""
 import datetime
 
 from config import Config
