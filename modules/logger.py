@@ -3,7 +3,6 @@ Logging module
 """
 # pylint: disable=inconsistent-return-statements
 import datetime
-import hashlib
 import logging
 import os
 import traceback
@@ -87,45 +86,41 @@ def after_request(response):
     :param response: Flask response object
     :return: response object
     """
-    ip = request.headers.get("Cf-Connecting-Ip", None)
-    ip_hash = hashlib.sha512(ip.encode()).hexdigest()[:15] if ip else "NoIp"
     path = request.full_path[:-1] if request.full_path[-1] == "?" else request.full_path
     status_type = int(str(response.status_code)[0])
     country = request.headers.get("Cf-Ipcountry", "NoCountry")
     referer = request.headers.get("Referer", "NoReferer")
     modified = request.headers.get("If-Modified-Since", "NoIfModif")
-    if ip_hash == "NoIp":
-        ip_hash = request.remote_addr
     if path.startswith("/static"):
-        logger.debug('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+        logger.debug('%s %s %s %s %s %s Referer: %s IfModif: %s',
                      country, request.method, request.scheme,
                      request.host, path, response.status, referer, modified)
     else:
         if status_type == 5:
-            logger.error('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+            logger.error('%s %s %s %s %s %s Referer: %s IfModif: %s',
                          country, request.method, request.scheme,
                          request.host, path, response.status, referer, modified)
         elif status_type == 4:
-            logger.warning('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+            logger.warning('%s %s %s %s %s %s Referer: %s IfModif: %s',
                            country, request.method, request.scheme,
                            request.host, path, response.status, referer, modified)
         else:
-            logger.info('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash,
+            logger.info('%s %s %s %s %s %s Referer: %s IfModif: %s',
                         country, request.method, request.scheme,
                         request.host, path, response.status, referer, modified)
 
     return response
 
 
-def exceptions(e):
+def exceptions(error):
     """Exceptions handler
 
-    :param e: exception object
+    :param error: exception object
     :return: rendered error page
     """
-    print(e)
-    tb = traceback.format_exc()
-    logger.error('\n%s', tb[:-1])
+    print(error)
+    traceback_formatted = traceback.format_exc()
+    logger.error('\n%s', traceback_formatted[:-1])
     title = gettext("Internal server error")
     default_description = gettext("500 description")
     return default_error_handler(InternalServerError(), title, default_description)
