@@ -16,7 +16,8 @@ def default_error_handler(error, title, default_description):
     :param default_description: error description to use unless redefined
     :return: rendered error page
     """
-    description = default_description if error.description == type(error).description else error.description
+    description = default_description \
+        if error.description == type(error).description else error.description
     if request.path.startswith('/api/'):
         description = description.replace("<br>", "")
         return jsonify(error=error.name, code=error.code, message=description), error.code
