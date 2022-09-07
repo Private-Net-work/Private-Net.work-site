@@ -1,9 +1,16 @@
+"""
+Note model
+"""
+# pylint: disable=too-few-public-methods
 import sqlalchemy
 
 from .db_session import SqlAlchemyBase
 
 
 class Note(SqlAlchemyBase):
+    """
+    Note model
+    """
     __tablename__ = 'notes'
 
     id = sqlalchemy.Column(sqlalchemy.String,

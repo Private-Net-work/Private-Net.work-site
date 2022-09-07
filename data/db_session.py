@@ -1,7 +1,12 @@
+"""
+DB initialisation and creating sessions
+"""
+# pylint: disable=invalid-name, global-statement, global-variable-not-assigned
 import os
+
 import sqlalchemy as sa
 import sqlalchemy.ext.declarative as dec
-import sqlalchemy.orm as orm
+from sqlalchemy import orm
 from sqlalchemy.orm import Session
 
 SqlAlchemyBase = dec.declarative_base()
@@ -10,6 +15,10 @@ __factory = None
 
 
 def global_init(db_file):
+    """
+    DB initialisation
+    :param db_file: path to DB
+    """
     global __factory
 
     if __factory:
@@ -30,5 +39,9 @@ def global_init(db_file):
 
 
 def create_session() -> Session:
+    """
+    Creates a new DB session
+    :return: session object
+    """
     global __factory
     return __factory()

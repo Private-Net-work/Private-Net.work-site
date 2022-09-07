@@ -1,3 +1,6 @@
+"""
+Stats model
+"""
 import sqlalchemy
 
 from blueprints.auth import is_admin
@@ -6,6 +9,9 @@ from .db_session import SqlAlchemyBase
 
 
 class Stats(SqlAlchemyBase):
+    """
+    Stats data model
+    """
     __tablename__ = 'stats'
 
     name = sqlalchemy.Column(sqlalchemy.String, primary_key=True)
@@ -13,16 +19,23 @@ class Stats(SqlAlchemyBase):
 
     @staticmethod
     def create_fields():
-        s = create_session()
+        """
+        Create fields for stats model
+        """
+        session = create_session()
         fields = ["created", "viewed", "mycreated", "myviewed", "construction"]
         for field in fields:
-            row = s.query(Stats).filter(Stats.name == field).first()
+            row = session.query(Stats).filter(Stats.name == field).first()
             if not row:
-                s.add(Stats(name=field, value=0))
-        s.commit()
+                session.add(Stats(name=field, value=0))
+        session.commit()
 
     @staticmethod
     def new_note(session):
+        """New note stats event
+
+        :param session: DB session object
+        """
         if is_admin():
             mycreated = session.query(Stats).filter(Stats.name == "mycreated").first()
             mycreated.value += 1
@@ -33,6 +46,10 @@ class Stats(SqlAlchemyBase):
 
     @staticmethod
     def view_note(session):
+        """View note stats event
+
+        :param session: DB session object
+        """
         if is_admin():
             myviewed = session.query(Stats).filter(Stats.name == "myviewed").first()
             myviewed.value += 1

@@ -1,3 +1,6 @@
+"""
+API endpoints
+"""
 import datetime
 from random import choice, randint
 from string import ascii_letters, digits
@@ -12,6 +15,10 @@ from data.stats import Stats
 
 
 def abort_if_note_not_found(note_id):
+    """Aborts request if there is no notes with this id
+
+    :param note_id: Note id
+    """
     session = db_session.create_session()
     note = session.query(Note).get(note_id)
     if not note:
@@ -30,11 +37,24 @@ def abort_if_note_not_found(note_id):
 
 
 class NoteResource(Resource):
+    """
+    Note Rest API resource
+    """
     def get(self, note_id):
+        """Get note by id
+
+        :param note_id:
+        :return: json response
+        """
         abort_if_note_not_found(note_id)
         return jsonify({'exist': True})
 
     def delete(self, note_id):
+        """Delete note by id
+
+        :param note_id: Note id
+        :return: json response
+        """
         abort_if_note_not_found(note_id)
         session = db_session.create_session()
         note = session.query(Note).get(note_id)
@@ -50,7 +70,14 @@ class NoteResource(Resource):
 
 
 class NotesResource(Resource):
+    """
+    Notes Rest API resource
+    """
     def post(self):
+        """Add a new note
+
+        :return: json response
+        """
         session = db_session.create_session()
 
         parser = reqparse.RequestParser()
@@ -91,17 +118,16 @@ class NotesResource(Resource):
                 return jsonify({'id': doc.id})
             return abort(413, message=f"Content length {len(args['content'])} is invalid!")
 
-        else:
-            if 0 < len(args["content"]) <= 10000:
-                note = Note(
-                    id=note_id,
-                    content=args['content'],
-                    counter=args['counter'],
-                    delete_date=delete_date
-                )
-                session.add(note)
-                session.commit()
+        if 0 < len(args["content"]) <= 10000:
+            note = Note(
+                id=note_id,
+                content=args['content'],
+                counter=args['counter'],
+                delete_date=delete_date
+            )
+            session.add(note)
+            session.commit()
 
-                Stats.new_note(session)
-                return jsonify({'id': note.id})
-            return abort(413, message=f"Content length {len(args['content'])} is invalid!")
+            Stats.new_note(session)
+            return jsonify({'id': note.id})
+        return abort(413, message=f"Content length {len(args['content'])} is invalid!")

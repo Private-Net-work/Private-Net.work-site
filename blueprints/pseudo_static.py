@@ -1,3 +1,6 @@
+"""
+Endpoints to serve robots.txt, favicon and other static pages
+"""
 from flask import Blueprint, render_template, request, send_from_directory, current_app
 from flask_babel import gettext
 
@@ -7,11 +10,21 @@ pseudo_static_bp = Blueprint("pseudo_static", "pseudo_static")
 @pseudo_static_bp.route('/robots.txt')
 @pseudo_static_bp.route('/favicon.ico')
 def static_from_root():
+    """
+    Endpoint, that serves robots.txt and favicon.ico
+
+    :return: static file
+    """
     return send_from_directory(current_app.static_folder, request.path[1:])
 
 
 @pseudo_static_bp.route('/static/notes/create_note.js')
 def create_note_js():
+    """
+    Endpoint, that serves create_note.js formatted with translated HTML
+
+    :return: rendered js file
+    """
     data = {
         'Некорректная длина записки!': gettext('Некорректная длина записки!'),
         'link info': gettext('link info'),
@@ -28,6 +41,11 @@ def create_note_js():
 
 @pseudo_static_bp.route('/static/notes/view_note.js')
 def view_note_js():
+    """
+    Endpoint, that serves view_note.js formatted with translated HTML
+
+    :return: rendered js file
+    """
     data = {
         'js save data': gettext('js save data'),
         'Выйти': gettext('Выйти'),
