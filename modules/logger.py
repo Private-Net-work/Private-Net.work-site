@@ -1,7 +1,7 @@
 """
 Logging module
 """
-# pylint: disable=invalid-name, unused-argument, inconsistent-return-statements
+# pylint: disable=inconsistent-return-statements
 import datetime
 import hashlib
 import logging
@@ -68,8 +68,8 @@ def before_request():
 
     :return: construction page if construction mode is on
     """
-    s = create_session()
-    construction_mode = s.query(Stats).filter(Stats.name == "construction").first()
+    session = create_session()
+    construction_mode = session.query(Stats).filter(Stats.name == "construction").first()
     if construction_mode.value == 1:
         if not is_admin() and request.path != "/auth" or \
                 is_admin() and request.path != "/construction/off":
@@ -123,6 +123,7 @@ def exceptions(e):
     :param e: exception object
     :return: rendered error page
     """
+    print(e)
     tb = traceback.format_exc()
     logger.error('\n%s', tb[:-1])
     title = gettext("Internal server error")

@@ -1,7 +1,6 @@
 """
 Stats model
 """
-# pylint: disable=invalid-name
 import sqlalchemy
 
 from blueprints.auth import is_admin
@@ -23,13 +22,13 @@ class Stats(SqlAlchemyBase):
         """
         Create fields for stats model
         """
-        s = create_session()
+        session = create_session()
         fields = ["created", "viewed", "mycreated", "myviewed", "construction"]
         for field in fields:
-            row = s.query(Stats).filter(Stats.name == field).first()
+            row = session.query(Stats).filter(Stats.name == field).first()
             if not row:
-                s.add(Stats(name=field, value=0))
-        s.commit()
+                session.add(Stats(name=field, value=0))
+        session.commit()
 
     @staticmethod
     def new_note(session):
