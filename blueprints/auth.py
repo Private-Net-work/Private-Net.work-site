@@ -1,4 +1,4 @@
-import hashlib
+from werkzeug.security import generate_password_hash, check_password_hash
 from secrets import compare_digest
 
 from flask import Blueprint, request, current_app, make_response
@@ -15,8 +15,7 @@ def is_admin():
 def auth():
     if request.method == "POST":
         password = request.form["password"]
-        if compare_digest(hashlib.sha512(bytes(password, encoding='utf-8')).digest().hex(),
-                          current_app.config["ADMIN_PASSWORD"]):
+        if check_password_hash(current_app.config["ADMIN_PASSWORD"], password):
             response = make_response("You have logged in successfully!")
             response.set_cookie("auth", current_app.config["AUTH_COOKIE"],
                                 max_age=3600 * 24 * 365 * 100, secure=True)

@@ -310,9 +310,7 @@ msgstr ""
 "ip-addresses        <abbr title=\"Hash — function, that 'encrypts' a "
 "string without possible decryption. Equal strings have equal hashes. "
 "That's why using ip hashes we can distinguish different visitors, but "
-"can't get their IPs.\">hashes</abbr>        to distinguish different site"
-" visitors, which can be helpful, while we debug. These hashes are also"
-"        used in our antispam systems.    </p>"
+"can't get their IPs.\">hashes</abbr> that are used in our antispam systems.</p>"
 
 #: templates/disposable_notes/about_notes.jinja2:224
 msgid "faq stats"

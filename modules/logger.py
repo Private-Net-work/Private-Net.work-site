@@ -63,30 +63,26 @@ def before_request():
 
 
 def after_request(response):
-    ip = request.headers.get("Cf-Connecting-Ip", None)
-    ip_hash = hashlib.sha512(ip.encode()).hexdigest()[:15] if ip else "NoIp"
     path = request.full_path[:-1] if request.full_path[-1] == "?" else request.full_path
     status_type = int(str(response.status_code)[0])
     country = request.headers.get("Cf-Ipcountry", "NoCountry")
     referer = request.headers.get("Referer", "NoReferer")
     modified = request.headers.get("If-Modified-Since", "NoIfModif")
-    if ip_hash == "NoIp":
-        ip_hash = request.remote_addr
     if path.startswith("/static"):
-        logger.debug('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
+        logger.debug('%s %s %s %s %s %s Referer: %s IfModif: %s', country, request.method,
                      request.scheme,
                      request.host, path, response.status, referer, modified)
     else:
         if status_type == 5:
-            logger.error('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
+            logger.error('%s %s %s %s %s %s Referer: %s IfModif: %s', country, request.method,
                          request.scheme,
                          request.host, path, response.status, referer, modified)
         elif status_type == 4:
-            logger.warning('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
+            logger.warning('%s %s %s %s %s %s Referer: %s IfModif: %s', country, request.method,
                            request.scheme,
                            request.host, path, response.status, referer, modified)
         else:
-            logger.info('%s %s %s %s %s %s %s Referer: %s IfModif: %s', ip_hash, country, request.method,
+            logger.info('%s %s %s %s %s %s Referer: %s IfModif: %s', country, request.method,
                         request.scheme,
                         request.host, path, response.status, referer, modified)
 
