@@ -40,18 +40,20 @@ def view_note(note_id):
     show_description = bool(request.cookies.get('showdescription') != "false")
     session = db_session.create_session()
     note = session.query(Note).get(note_id)
-    if not note:
-        doc = session.query(Doc).get(note_id)
-        if not doc:
-            abort(404)
-        elif doc.delete_date < datetime.datetime.now():
-            session.delete(doc)
+    if note:
+        if note.delete_date < datetime.datetime.now():
+            session.delete(note)
             session.commit()
             abort(404)
-    elif note.delete_date < datetime.datetime.now():
-        session.delete(note)
-        session.commit()
-        abort(404)
+    else:
+        doc = session.query(Doc).get(note_id)
+        if doc:
+            if doc.delete_date < datetime.datetime.now():
+                session.delete(doc)
+                session.commit()
+                abort(404)
+        else:
+            abort(404)
     return render_template("disposable_notes/view_note.jinja2", year=datetime.datetime.now().year,
                            note_id=note_id, show_descriprion=show_description,
                            is_admin=is_admin(), old="false")

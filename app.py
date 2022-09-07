@@ -8,7 +8,8 @@ from flask_babel import Babel
 from flask_restful import Api
 
 from blueprints.auth import auth_bp
-from blueprints.errorhandling import bad_request, forbidden, not_found, method_not_allowed, internal_server_error
+from blueprints.errorhandling import bad_request, forbidden,\
+    not_found, method_not_allowed, internal_server_error
 from blueprints.notes import notes_bp
 from blueprints.pseudo_static import pseudo_static_bp
 from blueprints.stats import stats_bp

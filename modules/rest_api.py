@@ -1,7 +1,6 @@
 """
 API endpoints
 """
-# pylint disable=duplicate-code
 import datetime
 from random import choice, randint
 from string import ascii_letters, digits

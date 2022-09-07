@@ -1,7 +1,6 @@
 """
 Stats pages for admin
 """
-# pylint disable=invalid-name
 from flask import Blueprint, abort
 
 from blueprints.auth import is_admin
@@ -18,11 +17,11 @@ def stats():
     :return: rendered stats page
     """
     if is_admin():
-        s = db_session.create_session()
-        created = s.query(Stats).filter(Stats.name == "created").first().value
-        viewed = s.query(Stats).filter(Stats.name == "viewed").first().value
-        mycreated = s.query(Stats).filter(Stats.name == "mycreated").first().value
-        myviewed = s.query(Stats).filter(Stats.name == "myviewed").first().value
+        session = db_session.create_session()
+        created = session.query(Stats).filter(Stats.name == "created").first().value
+        viewed = session.query(Stats).filter(Stats.name == "viewed").first().value
+        mycreated = session.query(Stats).filter(Stats.name == "mycreated").first().value
+        myviewed = session.query(Stats).filter(Stats.name == "myviewed").first().value
         return f"""
         <table>
         <tr><td>created</td><td>{created}</td>
@@ -43,10 +42,10 @@ def enable_construction_mode():
     :return: response with confirmation word
     """
     if is_admin():
-        s = db_session.create_session()
-        construction_mode = s.query(Stats).filter(Stats.name == "construction").first()
+        session = db_session.create_session()
+        construction_mode = session.query(Stats).filter(Stats.name == "construction").first()
         construction_mode.value = 1
-        s.commit()
+        session.commit()
         return "ON!"
     abort(403)
     return ""
@@ -59,10 +58,10 @@ def disable_construction_mode():
     :return: response with confirmation word
     """
     if is_admin():
-        s = db_session.create_session()
-        construction_mode = s.query(Stats).filter(Stats.name == "construction").first()
+        session = db_session.create_session()
+        construction_mode = session.query(Stats).filter(Stats.name == "construction").first()
         construction_mode.value = 0
-        s.commit()
+        session.commit()
         return "OFF!"
     abort(403)
     return ""
