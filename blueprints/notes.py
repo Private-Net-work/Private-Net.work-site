@@ -8,7 +8,6 @@ from data.docs import Doc
 from data.notes import Note
 
 notes_bp = Blueprint("notes", "notes")
-SYMBOLS = list("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890")
 
 
 @notes_bp.route('/', methods=["GET", "POST"])
