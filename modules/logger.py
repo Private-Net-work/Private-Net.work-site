@@ -86,6 +86,7 @@ def after_request(response):
     :param response: Flask response object
     :return: response object
     """
+
     path = request.full_path[:-1] if request.full_path[-1] == "?" else request.full_path
     status_type = int(str(response.status_code)[0])
     country = request.headers.get("Cf-Ipcountry", "NoCountry")
