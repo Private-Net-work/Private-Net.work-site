@@ -17,11 +17,14 @@
 <a href="https://stats.uptimerobot.com/YnWpPiD9Lo" target="_blank">
     <img src="https://img.shields.io/uptimerobot/ratio/m791547864-87556c1a8d4f6cc3c14b8a6b" alt="Uptime">
 </a>
+<a href="https://github.com/Private-Net-work/Private-Net.work-site/actions/workflows/pylint.yml" target="_blank">
+    <img src="https://img.shields.io/github/workflow/status/Private-Net-work/Private-Net.work-site/Pylint?label=Pylint" alt="Pylint">
+</a>
 <a href="https://private-net.work?lang=en" target="_blank">
     <img src="https://img.shields.io/badge/English-translated%20-lightgrey" alt="English translated">
 </a>
 <a href="https://private-net.work?lang=ru" target="_blank">
-    <img src="https://img.shields.io/badge/Ðóññêèé-ïåðåâåä¸í%20-lightgrey" alt="Ïåðåâåä¸í íà ðóññêèé">
+    <img src="https://img.shields.io/badge/Ð ÑƒÑÑÐºÐ¸Ð¹-Ð¿ÐµÑ€ÐµÐ²ÐµÐ´Ñ‘Ð½%20-lightgrey" alt="Ð ÑƒÑÑÐºÐ¸Ð¹ Ð¿ÐµÑ€ÐµÐ²ÐµÐ´Ñ‘Ð½">
 </a>
 </p>
 
