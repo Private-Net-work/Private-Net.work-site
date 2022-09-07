@@ -1,10 +1,10 @@
 """
 Admin authentication
 """
-from werkzeug.security import generate_password_hash, check_password_hash
 from secrets import compare_digest
 
 from flask import Blueprint, request, current_app, make_response
+from werkzeug.security import check_password_hash
 
 auth_bp = Blueprint("auth", "auth")
 
