@@ -15,6 +15,7 @@ WORKDIR /
 RUN pip install -r requirements.txt
 
 COPY docker/main.py /
+COPY docker/wsgi.py /
 COPY / /
 
 
@@ -22,4 +23,4 @@ COPY / /
 # We use the keyword 'CMD' to do that.
 # The following command will execute "python ./main.py".
 CMD [ "python", "./main.py" ]
-CMD [ "gunicorn", "--workers", "3", "--bind", "unix:notes.sock", "-m", "007", "docker/wsgi:app"]
+CMD [ "gunicorn", "--workers", "3", "--bind", "unix:notes.sock", "-m", "007", "wsgi:app"]
