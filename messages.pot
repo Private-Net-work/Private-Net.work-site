@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2022 ORGANIZATION
+# Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-21 21:12+0300\n"
+"POT-Creation-Date: 2023-01-19 22:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,107 +17,107 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: blueprints/errorhandling.py:19
+#: blueprints/errorhandling.py:35
 msgid "Bad request"
 msgstr ""
 
-#: blueprints/errorhandling.py:20
+#: blueprints/errorhandling.py:36
 msgid "400 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:25
+#: blueprints/errorhandling.py:46
 msgid "Forbidden"
 msgstr ""
 
-#: blueprints/errorhandling.py:26
+#: blueprints/errorhandling.py:47
 msgid "403 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:31
+#: blueprints/errorhandling.py:57
 msgid "Not found"
 msgstr ""
 
-#: blueprints/errorhandling.py:32
+#: blueprints/errorhandling.py:58
 msgid "404 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:37
+#: blueprints/errorhandling.py:68
 msgid "Unallowed method"
 msgstr ""
 
-#: blueprints/errorhandling.py:38
+#: blueprints/errorhandling.py:69
 msgid "405 description"
 msgstr ""
 
-#: blueprints/errorhandling.py:43
+#: blueprints/errorhandling.py:79
 msgid "Internal Server Error"
 msgstr ""
 
-#: blueprints/errorhandling.py:44 modules/logger.py:100
+#: blueprints/errorhandling.py:80 modules/logger.py:126
 msgid "500 description"
 msgstr ""
 
-#: blueprints/pseudo_static.py:16
+#: blueprints/pseudo_static.py:29
 msgid "Некорректная длина записки!"
 msgstr ""
 
-#: blueprints/pseudo_static.py:17
+#: blueprints/pseudo_static.py:30
 msgid "link info"
 msgstr ""
 
-#: blueprints/pseudo_static.py:18
+#: blueprints/pseudo_static.py:31
 msgid "Скопировать"
 msgstr ""
 
-#: blueprints/pseudo_static.py:19
+#: blueprints/pseudo_static.py:32
 msgid "Скопировано"
 msgstr ""
 
-#: blueprints/pseudo_static.py:20
+#: blueprints/pseudo_static.py:33
 msgid "js 400 error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:21 blueprints/pseudo_static.py:35
+#: blueprints/pseudo_static.py:34 blueprints/pseudo_static.py:53
 msgid "js 500 error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+#: blueprints/pseudo_static.py:35 blueprints/pseudo_static.py:54
 msgid "js unknown error"
 msgstr ""
 
-#: blueprints/pseudo_static.py:23
+#: blueprints/pseudo_static.py:36
 msgid "heavy doc"
 msgstr ""
 
-#: blueprints/pseudo_static.py:24
+#: blueprints/pseudo_static.py:37
 msgid "heavy content"
 msgstr ""
 
-#: blueprints/pseudo_static.py:32
+#: blueprints/pseudo_static.py:50
 msgid "js save data"
 msgstr ""
 
-#: blueprints/pseudo_static.py:33
+#: blueprints/pseudo_static.py:51
 msgid "Выйти"
 msgstr ""
 
-#: blueprints/pseudo_static.py:34
+#: blueprints/pseudo_static.py:52
 msgid "js already read"
 msgstr ""
 
-#: blueprints/pseudo_static.py:37
+#: blueprints/pseudo_static.py:55
 msgid "download file"
 msgstr ""
 
-#: modules/logger.py:58
+#: modules/logger.py:76
 msgid "Проводятся технические работы"
 msgstr ""
 
-#: modules/logger.py:59
+#: modules/logger.py:77
 msgid "construction description"
 msgstr ""
 
-#: modules/logger.py:99
+#: modules/logger.py:125
 msgid "Internal server error"
 msgstr ""
 

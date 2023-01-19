@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 21:12+0300\n"
+"POT-Creation-Date: 2023-01-19 22:55+0300\n"
 "PO-Revision-Date: 2022-01-13 19:27+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: en\n"
@@ -19,130 +19,130 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: blueprints/errorhandling.py:19
+#: blueprints/errorhandling.py:35
 msgid "Bad request"
 msgstr "Bad request"
 
-#: blueprints/errorhandling.py:20
+#: blueprints/errorhandling.py:36
 msgid "400 description"
 msgstr ""
 "You tried to request wrong data from the server, so it couldn't process "
 "your request. <br>If you think, that this happened because of our fault, "
 "contact site administrator. "
 
-#: blueprints/errorhandling.py:25
+#: blueprints/errorhandling.py:46
 msgid "Forbidden"
 msgstr "Forbidden"
 
-#: blueprints/errorhandling.py:26
+#: blueprints/errorhandling.py:47
 msgid "403 description"
 msgstr ""
 "You don't have enough rights to view this page. <br>If you think, that "
 "this happened because of our fault, contact site administrator."
 
-#: blueprints/errorhandling.py:31
+#: blueprints/errorhandling.py:57
 msgid "Not found"
 msgstr "Not found"
 
-#: blueprints/errorhandling.py:32
+#: blueprints/errorhandling.py:58
 msgid "404 description"
 msgstr ""
 "We can't find the page you are looking for. Perhaps, it was "
 "removed.<br>If you think, that this happened because of our fault, "
 "contact site administrator."
 
-#: blueprints/errorhandling.py:37
+#: blueprints/errorhandling.py:68
 msgid "Unallowed method"
 msgstr "Method Not Allowed"
 
-#: blueprints/errorhandling.py:38
+#: blueprints/errorhandling.py:69
 msgid "405 description"
 msgstr "Method %(method)s, that you are using, can't be used to open this page."
 
-#: blueprints/errorhandling.py:43
+#: blueprints/errorhandling.py:79
 msgid "Internal Server Error"
 msgstr "Internal Server Error"
 
-#: blueprints/errorhandling.py:44 modules/logger.py:100
+#: blueprints/errorhandling.py:80 modules/logger.py:126
 msgid "500 description"
 msgstr ""
 "Congratulations! You've broken our site :) <br>Well, we had an unexpected"
 " error. <br>Please, contact site administrator."
 
-#: blueprints/pseudo_static.py:16
+#: blueprints/pseudo_static.py:29
 msgid "Некорректная длина записки!"
 msgstr "Invalid note content length!"
 
-#: blueprints/pseudo_static.py:17
+#: blueprints/pseudo_static.py:30
 msgid "link info"
 msgstr "Copy note link below and send it to your interlocutor"
 
-#: blueprints/pseudo_static.py:18
+#: blueprints/pseudo_static.py:31
 msgid "Скопировать"
 msgstr "Copy"
 
-#: blueprints/pseudo_static.py:19
+#: blueprints/pseudo_static.py:32
 msgid "Скопировано"
 msgstr "Copied"
 
-#: blueprints/pseudo_static.py:20
+#: blueprints/pseudo_static.py:33
 msgid "js 400 error"
 msgstr ""
 "An unknown error occurred (400). Please, contact site administrator by "
 "email errors@private-net.work and report this problem. Sorry for the "
 "inconvenience."
 
-#: blueprints/pseudo_static.py:21 blueprints/pseudo_static.py:35
+#: blueprints/pseudo_static.py:34 blueprints/pseudo_static.py:53
 msgid "js 500 error"
 msgstr ""
 "Internal server error (500). Please, contact site administrator by email "
 "errors@private-net.work and report this problem. Sorry for the "
 "inconvenience."
 
-#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+#: blueprints/pseudo_static.py:35 blueprints/pseudo_static.py:54
 msgid "js unknown error"
 msgstr ""
 "An unknown error occurred. Please, contact site administrator by email "
 "errors@private-net.work and report this problem. Sorry for the "
 "inconvenience."
 
-#: blueprints/pseudo_static.py:23
+#: blueprints/pseudo_static.py:36
 msgid "heavy doc"
 msgstr "Your document size is too much (Allowed up to 2 MB)"
 
-#: blueprints/pseudo_static.py:24
+#: blueprints/pseudo_static.py:37
 msgid "heavy content"
 msgstr "Note content is too much."
 
-#: blueprints/pseudo_static.py:32
+#: blueprints/pseudo_static.py:50
 msgid "js save data"
 msgstr "Save all important data. You won't be able to open it here again."
 
-#: blueprints/pseudo_static.py:33
+#: blueprints/pseudo_static.py:51
 msgid "Выйти"
 msgstr "Exit"
 
-#: blueprints/pseudo_static.py:34
+#: blueprints/pseudo_static.py:52
 msgid "js already read"
 msgstr ""
 "This note has been already read. Obviously, it happened while you didn't "
 "confirm note reading. Error code: 404."
 
-#: blueprints/pseudo_static.py:37
+#: blueprints/pseudo_static.py:55
 msgid "download file"
 msgstr "Download file"
 
-#: modules/logger.py:58
+#: modules/logger.py:76
 msgid "Проводятся технические работы"
 msgstr "Site under construction"
 
-#: modules/logger.py:59
+#: modules/logger.py:77
 msgid "construction description"
 msgstr ""
 "We are updating our site to make it a bit better. Please, visit us later."
 " Sorry for the inconvenience."
 
-#: modules/logger.py:99
+#: modules/logger.py:125
 msgid "Internal server error"
 msgstr "Internal Server Error"
 
@@ -183,17 +183,17 @@ msgstr "How it works"
 #: templates/disposable_notes/about_notes.jinja2:117
 msgid "about service description"
 msgstr ""
-"<p>        We are a service, that will help you hide the most private "
-"data from being read by third parties        when sharing it with one "
+"<p>        We are a service that will help you hide the most private data"
+" from being read by third parties        when sharing it with one "
 "interlocutor. Instead of sharing your passwords, payment details, "
-"addresses and        other confidential data in the clear in messengers, "
-"send your partner a link to the one-time note        generated by this "
-"website.    </p>    <p>        After being first read, the note removes "
-"from our server and can't be recovered.        So if your interlocutor is"
-" the first to view the note,        nobody will be able to find out the "
-"note's content afterwards.        Even if anybody reads a note before "
-"him, at least, it will be realized,        when he won't be able to open "
-"the note.    </p>"
+"addresses, and        other confidential data in the clear in messengers,"
+" send your partner a link to the one-time note        generated by this "
+"website.    </p>    <p>        After being first read, the note is "
+"removed from our server and can't be recovered.        So if your "
+"interlocutor is the first to view the note,        nobody will be able to"
+" find out the note's content afterwards.        Even if anybody reads a "
+"note before him, at least, it will be realized,        when he won't be "
+"able to open the note.    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:118
 msgid "articles heading"
@@ -214,7 +214,7 @@ msgstr "Frequently asked questions"
 #: templates/disposable_notes/about_notes.jinja2:139
 #: templates/disposable_notes/about_notes.jinja2:168
 msgid "faq can-admins-see-note-content heading "
-msgstr "Can website admins or hosting-providers view the notes content?"
+msgstr "Can website admins or hosting providers view the notes content?"
 
 #: templates/disposable_notes/about_notes.jinja2:144
 #: templates/disposable_notes/about_notes.jinja2:179
@@ -229,7 +229,7 @@ msgstr "What do you know about note, except for its content?"
 #: templates/disposable_notes/about_notes.jinja2:154
 #: templates/disposable_notes/about_notes.jinja2:211
 msgid "faq storing-ip heading"
-msgstr "Do you store ip-addresses of your visitors?"
+msgstr "Do you store the ip-addresses of your visitors?"
 
 #: templates/disposable_notes/about_notes.jinja2:159
 #: templates/disposable_notes/about_notes.jinja2:218
@@ -253,54 +253,54 @@ msgstr "Copy link"
 #: templates/disposable_notes/about_notes.jinja2:174
 msgid "faq can-admins-see-note-content 1"
 msgstr ""
-"<p>        No, all notes are been encrypted by client's browser before "
+"<p>        No, all notes are encrypted by the client's browser before "
 "sending to our server.        A random secret key is used to encrypt a "
 "note, which is also generated by the browser.        This key is given to"
 " the reader in the link itself after the \"#\" symbol.        It is used "
 "by his browser to encrypt the note's content received from our server."
 "    </p>    <p>        No link symbols after \"#\" (and the key) are "
 "passed to the server.        This link part is called an anchor and it is"
-" usually used by browser to navigate through        the page.    </p>"
+" usually used by browsers to navigate through        the page.    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:177
 msgid "faq can-admins-see-note-content 2"
 msgstr ""
-"<p>        Thereby, we don't process any data from the note, except for "
-"it's encrypted content,        that can't be encrypted, as we don't know "
-"neither link nor secret key.    </p>    <p>        By the way, if you "
-"know how to see the browser's requests in the developer tools,        you"
-" can go and see how the notes are encrypted, and what is sent to our "
-"server.    </p>"
+"<p>        Therefore, we don't process any data from the note, except for"
+" its encrypted content,        that can't be encrypted, as we don't know "
+"either the link or secret key.    </p>    <p>        By the way, if you "
+"know how to see the browser    's requests in the developer tools,"
+"        you can go and see how the notes are encrypted, and what is sent "
+"to our server.    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:185
 msgid "faq sharing-decrypted-note-content"
 msgstr ""
 "<p>        No, our site doesn't share decrypted note's content. All "
-"requests, that are made        from the browser can be viewed in the "
+"requests that are made        from the browser can be viewed in the "
 "developer tools. All necessary libraries and        javascript-code is "
 "served directly from our server. We intentionally don't use anything"
-"        that is stored on other sites and CDN, to be confident, that all "
-"code used        don't collect data from our visitors' browsers.        "
-"This is our positive feature from competitive services.    </p>"
+"        that is stored on other sites and CDN, to be confident that all "
+"code used        doesn't collect data from our visitors' browsers."
+"        This is our positive feature from competitive services.    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:192
 msgid "faq note-data"
 msgstr ""
-"<p>        We don't associate neither note creater, nor its reader with "
-"the note itself.        We believe, that our goal is to store as few of "
-"your data as possible.    </p>    <p>        There have been always lots "
-"of notes, which have never been read.        Taking this into account, we"
-" decided to set the maximum storage period of every note.        When "
-"this period expires, the note deletes, even if it wasn't read yet. To "
-"prevent        fingerprinting we decided not to store the note's creation"
-" date. We store the expiration date        and time instead, allowing our"
-" users to choose the expiration period        (it can be foond in "
-"advanced options, when creating the note). By default, our notes are"
-"        deleted 7 days after creation. Please note, that it's also the "
-"maximum time they can be stored.    </p>    <p>        Now every note has"
-" 4 fields in our database:        <i>its id, encrypted content, expiry "
-"date and a counter (also needed for decryption)       </i>. Here is the "
-"example note data from the database:    </p>"
+"<p>        We don't associate neither the note creator, nor its reader "
+"with the note itself.        We believe that our goal is to store as few "
+"of your data as possible.    </p>    <p>        There have always been "
+"lots of notes, which have never been read.        Taking this into "
+"account, we decided to set the maximum storage period of every note."
+"        When this period expires, the note deletes, even if it wasn't "
+"read yet. To prevent        fingerprinting we decided not to store the "
+"note's creation date. We store the expiration date        and time "
+"instead, allowing our users to choose the expiration period        (it "
+"can be found in advanced options, when creating the note). By default, "
+"our notes are        deleted 7 days after creation. Please note, that "
+"it's also the maximum time they can be stored.    </p>    <p>        Now "
+"every note has 4 fields in our database:        <i>its id, encrypted "
+"content, expiry date and a counter (also needed for decryption)       "
+"</i>. Here is the example note data from the database:    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:217
 msgid "faq storing-ip"
@@ -310,7 +310,8 @@ msgstr ""
 "ip-addresses        <abbr title=\"Hash — function, that 'encrypts' a "
 "string without possible decryption. Equal strings have equal hashes. "
 "That's why using ip hashes we can distinguish different visitors, but "
-"can't get their IPs.\">hashes</abbr> that are used in our antispam systems.</p>"
+"can't get their IPs.\">hashes</abbr> that are used in our anti spam "
+"systems.</p>"
 
 #: templates/disposable_notes/about_notes.jinja2:224
 msgid "faq stats"
@@ -507,7 +508,7 @@ msgstr "Donate"
 
 #: templates/disposable_notes/donate.jinja2:82
 msgid "with bank card"
-msgstr "With bank card (RUSSIAN CARDS ONLY!)"
+msgstr "Using bank card (RUSSIAN CARDS ONLY!)"
 
 #: templates/disposable_notes/donate.jinja2:90
 msgid "payment amount"
@@ -523,7 +524,7 @@ msgstr "Pay"
 
 #: templates/disposable_notes/donate.jinja2:101
 msgid "with crypto"
-msgstr "With cryptocurrency"
+msgstr "Using cryptocurrency"
 
 #: templates/disposable_notes/donate.jinja2:274
 msgid "other crypto"

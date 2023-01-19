@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  2.0\n"
 "Report-Msgid-Bugs-To: errors@private-net.work\n"
-"POT-Creation-Date: 2022-07-21 21:12+0300\n"
+"POT-Creation-Date: 2023-01-19 22:55+0300\n"
 "PO-Revision-Date: 2022-01-13 19:26+0300\n"
 "Last-Translator: Private-Net.work <support@private-net.work>\n"
 "Language: ru\n"
@@ -20,54 +20,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: blueprints/errorhandling.py:19
+#: blueprints/errorhandling.py:35
 msgid "Bad request"
 msgstr "Ошибка в запросе"
 
-#: blueprints/errorhandling.py:20
+#: blueprints/errorhandling.py:36
 msgid "400 description"
 msgstr ""
 "Вы передали в запросе некорректные данные и сервер не смог их обработать."
 " <br>Если Вы считаете, что так произошло по нашей вине, свяжитесь с "
 "администратором сайта по контактам, указанным ниже."
 
-#: blueprints/errorhandling.py:25
+#: blueprints/errorhandling.py:46
 msgid "Forbidden"
 msgstr "Доступ запрещён"
 
-#: blueprints/errorhandling.py:26
+#: blueprints/errorhandling.py:47
 msgid "403 description"
 msgstr ""
 "У Вас нет прав для просмотра этой страницы. <br>Если Вы считаете, что так"
 " произошло по нашей вине, свяжитесь с администратором сайта по контактам,"
 " указанным ниже."
 
-#: blueprints/errorhandling.py:31
+#: blueprints/errorhandling.py:57
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: blueprints/errorhandling.py:32
+#: blueprints/errorhandling.py:58
 msgid "404 description"
 msgstr ""
 "Нам не удалось найти страницу, которую Вы пытаетесь открыть. Возможно, "
 "она была удалена. <br>Если Вы считаете, что так произошло по нашей вине, "
 "свяжитесь с администратором сайта по контактам, указанным ниже."
 
-#: blueprints/errorhandling.py:37
+#: blueprints/errorhandling.py:68
 msgid "Unallowed method"
 msgstr "Недопустимый метод"
 
-#: blueprints/errorhandling.py:38
+#: blueprints/errorhandling.py:69
 msgid "405 description"
 msgstr ""
 "Метод %(method)s, который Вы используете, не должен быть использован для "
 "открытия этой страницы."
 
-#: blueprints/errorhandling.py:43
+#: blueprints/errorhandling.py:79
 msgid "Internal Server Error"
 msgstr "Внутренняя ошибка сервера"
 
-#: blueprints/errorhandling.py:44 modules/logger.py:100
+#: blueprints/errorhandling.py:80 modules/logger.py:126
 msgid "500 description"
 msgstr ""
 "Поздравляем! Вам удалось сломать наш сайт :) <br>А если серьёзно, то у "
@@ -75,80 +75,80 @@ msgstr ""
 " администратором сайта по контактам, указанным ниже. Постараемся всё "
 "исправить."
 
-#: blueprints/pseudo_static.py:16
+#: blueprints/pseudo_static.py:29
 msgid "Некорректная длина записки!"
 msgstr "Некорректная длина записки!"
 
-#: blueprints/pseudo_static.py:17
+#: blueprints/pseudo_static.py:30
 msgid "link info"
 msgstr "Скопируйте ссылку на записку и отправьте своему собеседнику"
 
-#: blueprints/pseudo_static.py:18
+#: blueprints/pseudo_static.py:31
 msgid "Скопировать"
 msgstr "Скопировать"
 
-#: blueprints/pseudo_static.py:19
+#: blueprints/pseudo_static.py:32
 msgid "Скопировано"
 msgstr "Скопировано"
 
-#: blueprints/pseudo_static.py:20
+#: blueprints/pseudo_static.py:33
 msgid "js 400 error"
 msgstr ""
 "Произошла неизвестная ошибка (400). Пожалуйста, свяжитесь с "
 "администратором сайта по email errors@private-net.work и расскажите об "
 "этой проблеме. Приносим извинения за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:21 blueprints/pseudo_static.py:35
+#: blueprints/pseudo_static.py:34 blueprints/pseudo_static.py:53
 msgid "js 500 error"
 msgstr ""
 "Внутренняя ошибка сервера (500). Пожалуйста, свяжитесь с администратором "
 "сайта по email errors@private-net.work и расскажите об этой проблеме. "
 "Приносим извинения за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:22 blueprints/pseudo_static.py:36
+#: blueprints/pseudo_static.py:35 blueprints/pseudo_static.py:54
 msgid "js unknown error"
 msgstr ""
 "Произошла неизвестная ошибка. Пожалуйста, расскажите об этой проблеме "
 "администратору сайта по email errors@private-net.work. Приносим извинения"
 " за доставленные неудобства."
 
-#: blueprints/pseudo_static.py:23
+#: blueprints/pseudo_static.py:36
 msgid "heavy doc"
 msgstr "Размер документа слишком велик (Допускается до 2 МБ)"
 
-#: blueprints/pseudo_static.py:24
+#: blueprints/pseudo_static.py:37
 msgid "heavy content"
 msgstr "Содержимое записки слишком большое"
 
-#: blueprints/pseudo_static.py:32
+#: blueprints/pseudo_static.py:50
 msgid "js save data"
 msgstr "Сохраните все нужные данные. Открыть их здесь больше не получится."
 
-#: blueprints/pseudo_static.py:33
+#: blueprints/pseudo_static.py:51
 msgid "Выйти"
 msgstr "Выйти"
 
-#: blueprints/pseudo_static.py:34
+#: blueprints/pseudo_static.py:52
 msgid "js already read"
 msgstr ""
 "Эта записка уже была просмотрена. Похоже, что это произошло пока Вы не "
 "подтверждали открытие записки. Код ошибки: 404."
 
-#: blueprints/pseudo_static.py:37
+#: blueprints/pseudo_static.py:55
 msgid "download file"
 msgstr "Скачать документ"
 
-#: modules/logger.py:58
+#: modules/logger.py:76
 msgid "Проводятся технические работы"
 msgstr "Проводятся технические работы"
 
-#: modules/logger.py:59
+#: modules/logger.py:77
 msgid "construction description"
 msgstr ""
 "Мы проводим обновление сайта. Совсем скоро всё заработает, но придётся "
 "немного подождать. Приносим извинения за доставленные неудобства!"
 
-#: modules/logger.py:99
+#: modules/logger.py:125
 msgid "Internal server error"
 msgstr "Внутренняя ошибка сервера"
 
@@ -321,14 +321,15 @@ msgid "faq storing-ip"
 msgstr ""
 "<p>        Мы стараемся не собирать информацию о своих посетителях. "
 "Ip-адрес — это тоже информация о посетителе,        по которой можно его "
-"идентифицировать. Поэтому в своих журналах запросов к сайту"
-"        мы не храним только        <abbr title='Хеш — функция, которая "
-"позволяет \"зашифровать\" строку без возможности расшифровки. Одинаковые "
-"строки имеют одинаковые значения хешей. Поэтому, используя хеш ip-адреса,"
-" мы можем понять, где он был одинаковый, а где — разный, но не можем "
-"узнать сам ip-адрес.'>хеш</abbr>         от ip-адреса, который используеся в наших        "
-"антиспам-системах для защиты от ботов и злоумышленников, которые иногда "
-"пытаются создавать        записки в неограниченных количествах.    </p>"
+"идентифицировать. Поэтому в своих журналах запросов к сайту        мы не "
+"храним только        <abbr title='Хеш — функция, которая позволяет "
+"\"зашифровать\" строку без возможности расшифровки. Одинаковые строки "
+"имеют одинаковые значения хешей. Поэтому, используя хеш ip-адреса, мы "
+"можем понять, где он был одинаковый, а где — разный, но не можем узнать "
+"сам ip-адрес.'>хеш</abbr>         от ip-адреса, который используеся в "
+"наших        антиспам-системах для защиты от ботов и злоумышленников, "
+"которые иногда пытаются создавать        записки в неограниченных "
+"количествах.    </p>"
 
 #: templates/disposable_notes/about_notes.jinja2:224
 msgid "faq stats"
